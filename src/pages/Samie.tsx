@@ -308,9 +308,21 @@ export default function Samie() {
             <div>
               <h4 className="font-semibold mb-3">Our Brands</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>SAMIE — Heavy Industrial Equipment</li>
-                <li>POWERMAN — High‑Pressure Hydraulic Tools</li>
-                <li>SAMEE — Electrical Equipment</li>
+                <li>
+                  <a href="/brands/samie" className="hover:text-foreground transition-colors">
+                    SAMIE — Heavy Industrial Equipment
+                  </a>
+                </li>
+                <li>
+                  <a href="/brands/powerman" className="hover:text-foreground transition-colors">
+                    POWERMAN — High‑Pressure Hydraulic Tools
+                  </a>
+                </li>
+                <li>
+                  <a href="/brands/samee" className="hover:text-foreground transition-colors">
+                    SAMEE — Electrical Equipment
+                  </a>
+                </li>
               </ul>
             </div>
 
