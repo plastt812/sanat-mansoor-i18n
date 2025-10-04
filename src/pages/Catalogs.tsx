@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, FileText, Phone, Mail, MapPin } from "lucide-react";
+import { Download, FileText, Phone, Mail, MapPin , ChevronDown} from "lucide-react";
 
 type Catalog = {
   title: string;
@@ -72,10 +72,23 @@ export default function Catalogs() {
           </div>
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+
+{/* old brandsssssssssssssssss
             <div className="relative group">
               <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
                 Brands
               </span>
+*/}
+               
+               <div className="relative group">
+                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
+                  Brands
+                  <ChevronDown className="h-4 w-4" />
+                </span>
+
+         
+
+
               <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
                   <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
@@ -92,6 +105,8 @@ export default function Catalogs() {
                   </a>
                 </div>
               </div>
+
+
             </div>
             <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
             <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>

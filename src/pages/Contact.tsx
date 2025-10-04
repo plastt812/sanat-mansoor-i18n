@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight , ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -40,10 +40,15 @@ export default function Contact() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+
+
               <div className="relative group">
-                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
                   Brands
+                  <ChevronDown className="h-4 w-4" />
                 </span>
+
+
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">

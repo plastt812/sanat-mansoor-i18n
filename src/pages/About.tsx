@@ -19,7 +19,7 @@ import {
   Gauge,
   CheckCircle,
 } from "lucide-react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin , ChevronDown } from "lucide-react";
 import { Calendar } from "lucide-react";
 
 export default function About() {
@@ -56,10 +56,17 @@ export default function About() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+
+
+
               <div className="relative group">
-                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
                   Brands
+                  <ChevronDown className="h-4 w-4" />
                 </span>
+
+
+
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
