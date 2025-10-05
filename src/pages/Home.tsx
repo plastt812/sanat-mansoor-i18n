@@ -734,7 +734,7 @@ export default function Home() {
                   <span className="text-muted-foreground">info@sanatmansoor.com</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-10 w-10 text-primary mt-0.5" />
+                  <MapPin className="h-9 w-9 text-primary mt-0.5" />
                   <span className="text-muted-foreground">
                     #78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran
                   </span>
