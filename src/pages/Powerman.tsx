@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle, ChevronDown, Wrench, Zap, Settings, Droplet, Mountain, Factory } from "lucide-react";
 
 export default function Powerman() {
   const navigate = useNavigate();
@@ -11,15 +11,18 @@ export default function Powerman() {
   const collections = [
     {
       title: "Industrial Tools",
-      description: "Designed for maximum strength and durability. Pullers, Punchers, and Pex are the most commonly used."
+      description: "Designed for maximum strength and durability. Pullers, Punchers, and Pex are the most commonly used.",
+      icon: Wrench
     },
     {
       title: "Connection Technology",
-      description: "Dedicated tools for a wide range of operations used in connection technology. The most common applications are Crimping, Cutting, and Punching."
+      description: "Dedicated tools for a wide range of operations used in connection technology. The most common applications are Crimping, Cutting, and Punching.",
+      icon: Zap
     },
     {
       title: "Bolting Tools",
-      description: "Hydraulic nut splitters, and a variety of mechanical and hydraulic spreading tools."
+      description: "Hydraulic nut splitters, and a variety of mechanical and hydraulic spreading tools.",
+      icon: Settings
     }
   ];
 
@@ -61,15 +64,18 @@ export default function Powerman() {
   const applications = [
     {
       industry: "Oil & Gas",
-      description: "Explosion-proof air pumps for refineries, ensuring safety in hazardous environments."
+      description: "Explosion-proof air pumps for refineries, ensuring safety in hazardous environments.",
+      icon: Droplet
     },
     {
       industry: "Mining",
-      description: "Portable gasoline pumps for remote sites, delivering reliable power where needed."
+      description: "Portable gasoline pumps for remote sites, delivering reliable power where needed.",
+      icon: Mountain
     },
     {
       industry: "Construction",
-      description: "Nut splitters for quick maintenance, reducing downtime and improving efficiency."
+      description: "Nut splitters for quick maintenance, reducing downtime and improving efficiency.",
+      icon: Factory
     }
   ];
 
@@ -122,67 +128,93 @@ export default function Powerman() {
         </div>
       </motion.nav>
 
-      {/* Hero Section */}
-      <section className="p-0">
-        <div className="relative overflow-hidden min-h-[50vh] flex items-center justify-center">
+      {/* Hero Section - Full Width with Overlay */}
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <img
+          src="https://harmless-tapir-303.convex.cloud/api/storage/2bbcab05-180d-460f-b184-519c9f98ac09"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center max-w-5xl mx-auto px-6"
+        >
           <img
-            src="https://harmless-tapir-303.convex.cloud/api/storage/2bbcab05-180d-460f-b184-519c9f98ac09"
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-30 select-none pointer-events-none"
+            src="https://harmless-tapir-303.convex.cloud/api/storage/710bd358-735e-4966-b819-effdc9610938"
+            alt="POWERMAN logo"
+            className="h-24 w-auto mb-8 mx-auto object-contain drop-shadow-2xl"
           />
-          <div className="absolute inset-0 bg-background/40" />
-          <div className="relative z-10 px-6 text-center max-w-4xl mx-auto">
-            <img
-              src="https://harmless-tapir-303.convex.cloud/api/storage/710bd358-735e-4966-b819-effdc9610938"
-              alt="POWERMAN logo"
-              className="h-20 w-auto mb-6 mx-auto object-contain"
-            />
-            <Badge variant="secondary" className="mb-4">Industrial Hydraulic Equipment</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Cylinders, Pumps & Tools
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Reliable, Durable, and Safe High-Pressure Hydraulic Equipment for any application requiring applied force.
-            </p>
-          </div>
-        </div>
+          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">Industrial Hydraulic Equipment</Badge>
+          <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
+            Cylinders, Pumps & Tools
+          </h1>
+          <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            Reliable, Durable, and Safe High-Pressure Hydraulic Equipment for any application requiring applied force
+          </p>
+        </motion.div>
       </section>
 
-      {/* Collections Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-8">
+      {/* Tool Collections - Editorial Layout */}
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:64px_64px]" />
+        
+        <div className="max-w-7xl mx-auto px-8 relative">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
-            className="text-center mb-16"
+            className="mb-20"
           >
-            <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Powerman Tool Collections
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              An extensive range of tools to ensure that even your most demanding application can be undertaken with the highest degree of safety and accuracy.
-            </p>
+            <div className="max-w-3xl">
+              <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
+                Tool Collections
+              </div>
+              <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                Powerman Tool Collections
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
+                An extensive range of tools to ensure that even your most demanding application can be undertaken with the highest degree of safety and accuracy.
+              </p>
+            </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {collections.map((collection, index) => (
-              <motion.div
-                key={collection.title}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -3, scale: 1.02, transition: { type: "spring", stiffness: 360, damping: 18 } }}
-              >
-                <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-8 text-center">
-                    <h3 className="font-bold text-xl mb-4">{collection.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{collection.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="space-y-0">
+            {collections.map((collection, index) => {
+              const Icon = collection.icon;
+              return (
+                <motion.div
+                  key={collection.title}
+                  initial={{ x: -30, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="group border-b border-border/50 py-10 hover:bg-muted/30 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-8">
+                    <div className="flex-shrink-0 text-6xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none pt-2">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <Icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                          {collection.title}
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
+                        {collection.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -231,8 +263,8 @@ export default function Powerman() {
         </div>
       </section>
 
-      {/* Applications Section */}
-      <section className="py-20">
+      {/* Applications Section - Masonry Grid */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -240,58 +272,72 @@ export default function Powerman() {
             viewport={{ once: false, amount: 0.25 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold tracking-tight mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Industry Applications
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Delivering energy savings and reduced downtime in hazardous environments across multiple industries.
+              Delivering energy savings and reduced downtime in hazardous environments across multiple industries
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {applications.map((app, index) => (
-              <motion.div
-                key={app.industry}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -3, scale: 1.02, transition: { type: "spring", stiffness: 360, damping: 18 } }}
-              >
-                <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-8">
-                    <h3 className="font-bold text-xl mb-4 text-primary">{app.industry}</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {applications.map((app, index) => {
+              const Icon = app.icon;
+              return (
+                <motion.div
+                  key={app.industry}
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.25 }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+                  className="group"
+                >
+                  <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-background to-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="h-2 flex-1 bg-gradient-to-r from-primary to-primary/40 rounded-full" />
+                    </div>
+                    <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{app.industry}</h3>
                     <p className="text-muted-foreground leading-relaxed">{app.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-muted/80">
-        <div className="max-w-4xl mx-auto px-8 text-center">
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.25 }}
-          >
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
-              Need High-Pressure Hydraulic Solutions?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Contact our POWERMAN team to explore hydraulic tools and equipment for your specific application.
-            </p>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-8 py-6">
-                Get in Touch
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </motion.div>
+      {/* CTA Section - Full Width with Background */}
+      <section className="relative py-32 overflow-hidden">
+        <img
+          src="https://harmless-tapir-303.convex.cloud/api/storage/c750e4c6-3f16-4d0f-b8ad-89d9006d4740"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-30 select-none pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/5 to-background/0" />
+        
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.25 }}
+          className="relative z-10 max-w-4xl mx-auto px-8 text-center"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Need High-Pressure Hydraulic Solutions?
+          </h2>
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+            Contact our POWERMAN team to explore hydraulic tools and equipment for your specific application
+          </p>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-10 py-7 rounded-full shadow-lg">
+              Get in Touch
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </motion.div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Footer */}
