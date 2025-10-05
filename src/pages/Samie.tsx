@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
 
@@ -157,43 +156,51 @@ export default function Samie() {
         </motion.div>
       </section>
 
-      {/* Engineering Excellence - Clean List Layout */}
-      <section className="py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-8">
+      {/* Engineering Excellence - Editorial Layout */}
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:64px_64px]" />
+        
+        <div className="max-w-7xl mx-auto px-8 relative">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
-            className="mb-16 text-center"
+            className="mb-20"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Engineering Excellence for Every Industry
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
-            </p>
+            <div className="max-w-3xl">
+              <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
+                Our Capabilities
+              </div>
+              <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                Engineering Excellence for Every Industry
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
+                From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
+              </p>
+            </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="space-y-0">
             {capabilities.map((cap, index) => (
               <motion.div
                 key={cap.title}
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.08 }}
-                className="relative p-8 rounded-xl bg-background/60 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+                initial={{ x: -30, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ delay: index * 0.05 }}
+                className="group border-b border-border/50 py-10 hover:bg-muted/30 transition-all duration-300"
               >
-                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-primary/20 rounded-l-xl" />
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <CheckCircle className="h-6 w-6 text-primary" />
-                    </div>
+                <div className="flex items-start gap-8">
+                  <div className="flex-shrink-0 text-6xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none pt-2">
+                    {String(index + 1).padStart(2, '0')}
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">{cap.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{cap.description}</p>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                      {cap.title}
+                    </h3>
+                    <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
+                      {cap.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
