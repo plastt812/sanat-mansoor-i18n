@@ -253,9 +253,9 @@ export default function Samie() {
         <img
           src="https://harmless-tapir-303.convex.cloud/api/storage/c750e4c6-3f16-4d0f-b8ad-89d9006d4740"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-10 select-none pointer-events-none"
+          className="absolute inset-0 h-full w-full object-cover opacity-30 select-none pointer-events-none"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/5 to-background/0" />
         
         <motion.div
           initial={{ y: 20, opacity: 0 }}
