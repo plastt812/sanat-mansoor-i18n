@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle, ChevronDown, Cog, Wrench, Droplet, CircleDot, Mountain, Layers, Zap, Settings, Factory } from "lucide-react";
 
 export default function Samie() {
   const navigate = useNavigate();
@@ -41,39 +41,48 @@ export default function Samie() {
   const solutions = [
     {
       title: "Journal Bearings & Chocks",
-      description: "Over 700 backup chocks and 1,100+ bearings and bushings for Mobarakeh Steel Company, providing low-friction support for rotating shafts."
+      description: "Over 700 backup chocks and 1,100+ bearings and bushings for Mobarakeh Steel Company, providing low-friction support for rotating shafts.",
+      icon: CircleDot
     },
     {
       title: "Liner Handler Machines",
-      description: "Re-engineered models (1,000-5,000 kg lifting capacity) for streamlined liner replacement in industrial applications."
+      description: "Re-engineered models (1,000-5,000 kg lifting capacity) for streamlined liner replacement in industrial applications.",
+      icon: Wrench
     },
     {
       title: "Oil & Gas Equipment",
-      description: "Production of complex spare parts and equipment used in the Oil & Gas industry, Steel, Cement, and Compost companies, as well as Power Plants."
+      description: "Production of complex spare parts and equipment used in the Oil & Gas industry, Steel, Cement, and Compost companies, as well as Power Plants.",
+      icon: Droplet
     },
     {
       title: "Bearings, Chocks, and Bushes",
-      description: "Manufacturing & repairment of various Bearings, Chocks, and Bushes in different sizes."
+      description: "Manufacturing & repairment of various Bearings, Chocks, and Bushes in different sizes.",
+      icon: Cog
     },
     {
       title: "Cone Crushers",
-      description: "Manufacturing of Cone Crushers for mining and industrial applications."
+      description: "Manufacturing of Cone Crushers for mining and industrial applications.",
+      icon: Mountain
     },
     {
       title: "Pickling and Recoiling Equipment",
-      description: "Manufacturing of Machines, Frames, and Rollers for Pickling and Recoiling Lines."
+      description: "Manufacturing of Machines, Frames, and Rollers for Pickling and Recoiling Lines.",
+      icon: Layers
     },
     {
       title: "High Pressure Grinding Rolls (HPGR)",
-      description: "Over 80 enhanced units utilizing high pressure for efficient grinding, energy savings, and consistent output."
+      description: "Over 80 enhanced units utilizing high pressure for efficient grinding, energy savings, and consistent output.",
+      icon: Zap
     },
     {
       title: "Special Duty Machines",
-      description: "Custom-designed to meet unique industrial requirements."
+      description: "Custom-designed to meet unique industrial requirements.",
+      icon: Settings
     },
     {
       title: "Custom Production Lines",
-      description: "Complete lines integrating with your infrastructure, like the reverse-engineered 2,500-ton rollers and equipment for Mobarakeh Steel's pickling and recoiling line."
+      description: "Complete lines integrating with your infrastructure, like the reverse-engineered 2,500-ton rollers and equipment for Mobarakeh Steel's pickling and recoiling line.",
+      icon: Factory
     }
   ];
 
@@ -227,23 +236,31 @@ export default function Samie() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((solution, index) => (
-              <motion.div
-                key={solution.title}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                className="group"
-              >
-                <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-background to-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
-                  <div className="h-2 w-16 bg-gradient-to-r from-primary to-primary/40 rounded-full mb-6" />
-                  <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{solution.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
-                </div>
-              </motion.div>
-            ))}
+            {solutions.map((solution, index) => {
+              const Icon = solution.icon;
+              return (
+                <motion.div
+                  key={solution.title}
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.25 }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+                  className="group"
+                >
+                  <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-background to-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="h-2 flex-1 bg-gradient-to-r from-primary to-primary/40 rounded-full" />
+                    </div>
+                    <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{solution.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
