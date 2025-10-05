@@ -157,7 +157,7 @@ export default function Samie() {
         </motion.div>
       </section>
 
-      {/* Engineering Excellence - Split Layout */}
+      {/* Engineering Excellence - Clean List Layout */}
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div
@@ -174,26 +174,26 @@ export default function Samie() {
             </p>
           </motion.div>
 
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {capabilities.map((cap, index) => (
               <motion.div
                 key={cap.title}
-                initial={{ x: index % 2 === 0 ? -40 : 40, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
                 transition={{ delay: index * 0.08 }}
-                className={`flex flex-col lg:flex-row gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+                className="relative p-8 rounded-xl bg-background/60 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300 group"
               >
-                <div className="flex-1">
-                  <div className="relative">
-                    <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary to-primary/20 rounded-full" />
-                    <h3 className="font-bold text-2xl mb-4 text-primary">{cap.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed text-lg">{cap.description}</p>
+                <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-primary/20 rounded-l-xl" />
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                    </div>
                   </div>
-                </div>
-                <div className="flex-shrink-0">
-                  <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border border-primary/20">
-                    <CheckCircle className="h-12 w-12 text-primary" />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">{cap.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{cap.description}</p>
                   </div>
                 </div>
               </motion.div>
