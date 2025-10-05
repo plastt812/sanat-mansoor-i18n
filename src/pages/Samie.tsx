@@ -127,78 +127,82 @@ export default function Samie() {
         </div>
       </motion.nav>
 
-      {/* Hero Section */}
-      <section className="p-0">
-        <div className="relative overflow-hidden min-h-[50vh] flex items-center justify-center">
+      {/* Hero Section - Full Width with Overlay */}
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <img
+          src="https://harmless-tapir-303.convex.cloud/api/storage/2bbcab05-180d-460f-b184-519c9f98ac09"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center max-w-5xl mx-auto px-6"
+        >
           <img
-            src="https://harmless-tapir-303.convex.cloud/api/storage/2bbcab05-180d-460f-b184-519c9f98ac09"
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-30 select-none pointer-events-none"
+            src="https://harmless-tapir-303.convex.cloud/api/storage/e7220248-19c5-4689-8607-7b0341910b7e"
+            alt="SAMIE logo"
+            className="h-24 w-auto mb-8 mx-auto object-contain drop-shadow-2xl"
           />
-          <div className="absolute inset-0 bg-background/40" />
-          <div className="relative z-10 px-6 text-center max-w-4xl mx-auto">
-            <img
-              src="https://harmless-tapir-303.convex.cloud/api/storage/e7220248-19c5-4689-8607-7b0341910b7e"
-              alt="SAMIE logo"
-              className="h-20 w-auto mb-6 mx-auto object-contain"
-            />
-            <Badge variant="secondary" className="mb-4">Industrial Projects</Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Machine Design & Fabrication - Machinery Services
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Our oldest brand, with more than 50 years of experience, manufactures complex machines and equipment for various industries.
-            </p>
-          </div>
-        </div>
+          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">Industrial Projects</Badge>
+          <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
+            Machine Design & Fabrication
+          </h1>
+          <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            Over 50 years of engineering excellence in complex machinery and equipment for the world's most demanding industries
+          </p>
+        </motion.div>
       </section>
 
-      {/* Engineering Excellence Section */}
-      <section className="py-20">
+      {/* Engineering Excellence - Split Layout */}
+      <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
-            className="text-center mb-16"
+            className="mb-16"
           >
-            <h2 className="text-4xl font-bold tracking-tight mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Engineering Excellence for Every Industry
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions.
+            <p className="text-xl text-muted-foreground max-w-3xl">
+              From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-8">
             {capabilities.map((cap, index) => (
               <motion.div
                 key={cap.title}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ x: index % 2 === 0 ? -20 : 20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ y: -3, scale: 1.01, transition: { type: "spring", stiffness: 360, damping: 18 } }}
+                transition={{ delay: index * 0.1 }}
+                className="group"
               >
-                <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-primary mt-1 shrink-0" />
-                      <div>
-                        <h3 className="font-bold text-lg mb-2">{cap.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{cap.description}</p>
-                      </div>
+                <div className="flex gap-4 p-6 rounded-xl bg-background/60 backdrop-blur border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
+                  <div className="shrink-0">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <CheckCircle className="h-6 w-6 text-primary" />
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">{cap.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{cap.description}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Flagship Solutions Section */}
-      <section className="py-20 bg-muted/80">
+      {/* Flagship Solutions - Masonry Grid */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -206,11 +210,11 @@ export default function Samie() {
             viewport={{ once: false, amount: 0.25 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold tracking-tight mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Our Flagship Solutions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven industrial equipment and machinery designed for maximum performance and reliability.
+              Proven industrial equipment and machinery designed for maximum performance and reliability
             </p>
           </motion.div>
 
@@ -222,42 +226,48 @@ export default function Samie() {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
                 transition={{ delay: index * 0.05 }}
-                whileHover={{ y: -3, scale: 1.02, transition: { type: "spring", stiffness: 360, damping: 18 } }}
+                whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+                className="group"
               >
-                <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="font-bold text-lg mb-3">{solution.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{solution.description}</p>
-                  </CardContent>
-                </Card>
+                <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-background to-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                  <div className="h-2 w-16 bg-gradient-to-r from-primary to-primary/40 rounded-full mb-6" />
+                  <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{solution.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-8 text-center">
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.25 }}
-          >
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
-              Ready to Discuss Your Project?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Contact our SAMIE team to explore custom machinery solutions for your industrial needs.
-            </p>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-8 py-6">
-                Get in Touch
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </motion.div>
+      {/* CTA Section - Full Width with Background */}
+      <section className="relative py-32 overflow-hidden">
+        <img
+          src="https://harmless-tapir-303.convex.cloud/api/storage/c750e4c6-3f16-4d0f-b8ad-89d9006d4740"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-10 select-none pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+        
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.25 }}
+          className="relative z-10 max-w-4xl mx-auto px-8 text-center"
+        >
+          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Ready to Discuss Your Project?
+          </h2>
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+            Contact our SAMIE team to explore custom machinery solutions tailored to your industrial needs
+          </p>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-10 py-7 rounded-full shadow-lg">
+              Get in Touch
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </motion.div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Footer */}
@@ -338,7 +348,7 @@ export default function Samie() {
                   <span className="text-muted-foreground">info@sanatmansoor.com</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-9 w-9 text-primary mt-0.5" />
+                  <MapPin className="h-5 w-5 text-primary mt-0.5" />
                   <span className="text-muted-foreground">
                     #78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran
                   </span>
