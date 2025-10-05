@@ -164,35 +164,36 @@ export default function Samie() {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
-            className="mb-16"
+            className="mb-16 text-center"
           >
             <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Engineering Excellence for Every Industry
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-12">
             {capabilities.map((cap, index) => (
               <motion.div
                 key={cap.title}
-                initial={{ x: index % 2 === 0 ? -20 : 20, opacity: 0 }}
+                initial={{ x: index % 2 === 0 ? -40 : 40, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.1 }}
-                className="group"
+                transition={{ delay: index * 0.08 }}
+                className={`flex flex-col lg:flex-row gap-8 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
               >
-                <div className="flex gap-4 p-6 rounded-xl bg-background/60 backdrop-blur border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
-                  <div className="shrink-0">
-                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <CheckCircle className="h-6 w-6 text-primary" />
-                    </div>
+                <div className="flex-1">
+                  <div className="relative">
+                    <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-primary to-primary/20 rounded-full" />
+                    <h3 className="font-bold text-2xl mb-4 text-primary">{cap.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-lg">{cap.description}</p>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">{cap.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{cap.description}</p>
+                </div>
+                <div className="flex-shrink-0">
+                  <div className="h-24 w-24 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border border-primary/20">
+                    <CheckCircle className="h-12 w-12 text-primary" />
                   </div>
                 </div>
               </motion.div>
