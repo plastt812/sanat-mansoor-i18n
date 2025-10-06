@@ -10,31 +10,38 @@ export default function Samie() {
   const capabilities = [
     {
       title: "Engineered for Excellence",
-      description: "Our team of highly qualified engineers leverages cutting-edge design principles and advanced software to create robust and efficient solutions that operate flawlessly under rigorous conditions."
+      description: "Our team of highly qualified engineers leverages cutting-edge design principles and advanced software to create robust and efficient solutions that operate flawlessly under rigorous conditions.",
+      icon: Cog
     },
     {
       title: "Collaborative Engineering and Manufacturing",
-      description: "Through strategic partnerships, like the Esfarayen Industrial Complex Special Consortium, we foster innovation in public-private collaborations for cutting-edge machinery."
+      description: "Through strategic partnerships, like the Esfarayen Industrial Complex Special Consortium, we foster innovation in public-private collaborations for cutting-edge machinery.",
+      icon: Settings
     },
     {
       title: "Hydraulic Engineering and Manufacturing",
-      description: "We design and manufacture hydraulic circuits, custom cylinders, and components for key industries. Our POWERMAN brand offers high-pressure (700 and 1,500 bar) tools and equipment."
+      description: "We design and manufacture hydraulic circuits, custom cylinders, and components for key industries. Our POWERMAN brand offers high-pressure (700 and 1,500 bar) tools and equipment.",
+      icon: Droplet
     },
     {
       title: "Mechanical Structure Design and Manufacturing",
-      description: "We create solid frameworks, precise actuation systems, and lightweight yet durable structures to withstand demanding conditions."
+      description: "We create solid frameworks, precise actuation systems, and lightweight yet durable structures to withstand demanding conditions.",
+      icon: Wrench
     },
     {
       title: "Precision and Large Piece Machining",
-      description: "Using state-of-the-art CNC centers, we achieve exceptional accuracy in components of all sizes, reducing wear and extending lifespan."
+      description: "Using state-of-the-art CNC centers, we achieve exceptional accuracy in components of all sizes, reducing wear and extending lifespan.",
+      icon: Zap
     },
     {
       title: "Advanced Casting",
-      description: "Via our Felez Taban subsidiary, we produce high-performance alloy components for mining, built to withstand extreme wear."
+      description: "Via our Felez Taban subsidiary, we produce high-performance alloy components for mining, built to withstand extreme wear.",
+      icon: Mountain
     },
     {
       title: "Advanced Welding Expertise",
-      description: "Our certified technicians use cutting-edge techniques to ensure structural integrity, minimizing distortion and maximizing strength."
+      description: "Our certified technicians use cutting-edge techniques to ensure structural integrity, minimizing distortion and maximizing strength.",
+      icon: Factory
     }
   ];
 
@@ -190,30 +197,38 @@ export default function Samie() {
           </motion.div>
 
           <div className="space-y-0">
-            {capabilities.map((cap, index) => (
-              <motion.div
-                key={cap.title}
-                initial={{ x: -30, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ delay: index * 0.05 }}
-                className="group border-b border-border/50 py-10 hover:bg-muted/30 transition-all duration-300"
-              >
-                <div className="flex items-start gap-8">
-                  <div className="flex-shrink-0 text-6xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none pt-2">
-                    {String(index + 1).padStart(2, '0')}
+            {capabilities.map((cap, index) => {
+              const Icon = cap.icon;
+              return (
+                <motion.div
+                  key={cap.title}
+                  initial={{ x: -30, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="group border-b border-border/50 py-10 hover:bg-muted/30 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-8">
+                    <div className="flex-shrink-0 text-6xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none pt-2">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <Icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                          {cap.title}
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
+                        {cap.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1 pt-2">
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                      {cap.title}
-                    </h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
-                      {cap.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
