@@ -131,73 +131,88 @@ export default function Samee() {
         </div>
       </motion.nav>
 
-      {/* Hero Section - Minimalist with centered content */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
+      {/* Hero Section - Full Width with Overlay */}
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <img
+          src="https://harmless-tapir-303.convex.cloud/api/storage/2bbcab05-180d-460f-b184-519c9f98ac09"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 max-w-5xl mx-auto px-8 text-center"
+          className="relative z-10 text-center max-w-5xl mx-auto px-6"
         >
           <img
             src="https://harmless-tapir-303.convex.cloud/api/storage/3a72f77b-550f-4ecc-a660-ecb8d3851593"
             alt="SAMEE logo"
-            className="h-20 w-auto mb-8 mx-auto object-contain"
+            className="h-24 w-auto mb-8 mx-auto object-contain drop-shadow-2xl"
           />
-          <Badge variant="secondary" className="mb-6 text-sm px-4 py-1.5">Industrial Electrical Equipment</Badge>
-          <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">Industrial Electrical Equipment</Badge>
+          <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
             Outlets & Plugs, Cable Trolleys,<br />Alarm Sirens
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             SAMEE combines the widest selection of industrial sockets and plugs, sirens, and cable festoon systems with reliability, durability, and built-in safety.
           </p>
         </motion.div>
       </section>
 
-      {/* Product Categories - Large Icon Grid */}
-      <section className="py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-8">
+      {/* Product Categories - Editorial Layout */}
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:64px_64px]" />
+        
+        <div className="max-w-7xl mx-auto px-8 relative">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
-            className="mb-20 text-center"
+            className="mb-20"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-              Product Categories
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive electrical solutions designed to make it easy to find the right equipment for any application.
-            </p>
+            <div className="max-w-3xl">
+              <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
+                Product Categories
+              </div>
+              <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+                Comprehensive Electrical Solutions
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
+                Designed to make it easy to find the right equipment for any application, from sockets and plugs to cable festoon systems.
+              </p>
+            </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-0">
             {productCategories.map((category, index) => {
               const Icon = category.icon;
               return (
                 <motion.div
                   key={category.title}
-                  initial={{ y: 30, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: false, amount: 0.25 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -5, transition: { type: "spring", stiffness: 300, damping: 20 } }}
-                  className="group"
+                  initial={{ x: -30, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: false, amount: 0.3 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="group border-b border-border/50 py-10 hover:bg-muted/30 transition-all duration-300"
                 >
-                  <div className="h-full p-10 bg-background rounded-3xl border border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
-                    <div className="flex items-start gap-6">
-                      <div className="flex-shrink-0 p-4 rounded-2xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <Icon className="h-10 w-10 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  <div className="flex items-start gap-8">
+                    <div className="flex-shrink-0 text-6xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors leading-none pt-2">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <div className="flex items-center gap-4 mb-3">
+                        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <Icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
                           {category.title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {category.description}
-                        </p>
                       </div>
+                      <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
+                        {category.description}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -207,83 +222,84 @@ export default function Samee() {
         </div>
       </section>
 
-      {/* Key Features - Compact List */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-8">
+      {/* Key Features Section */}
+      <section className="py-20 bg-muted/80">
+        <div className="max-w-7xl mx-auto px-8">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
-            className="mb-16 text-center"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+            <h2 className="text-4xl font-bold tracking-tight mb-4">
               Key Features and Applications
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Robust electrical solutions with IP-rated protection, corrosion resistance, and easy installation for high-load environments.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ x: -20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
                 transition={{ delay: index * 0.05 }}
-                className="flex items-start gap-4 group"
+                whileHover={{ y: -3, scale: 1.02, transition: { type: "spring", stiffness: 360, damping: 18 } }}
               >
-                <CheckCircle className="h-6 w-6 text-primary mt-0.5 shrink-0 group-hover:scale-110 transition-transform" />
-                <div>
-                  <h3 className="font-bold text-lg mb-1 group-hover:text-primary transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
+                <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary mt-1 shrink-0" />
+                      <div>
+                        <h3 className="font-bold mb-2">{feature.title}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Applications - Wide Cards */}
-      <section className="py-24 bg-muted/30">
-        <div className="max-w-6xl mx-auto px-8">
+      {/* Applications Section - Masonry Grid */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-8">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
-            className="mb-16 text-center"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Industry Applications
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ensuring safety and operational uptime in challenging industrial conditions across multiple sectors.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Ensuring safety and operational uptime in challenging industrial conditions across multiple sectors
             </p>
           </motion.div>
 
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {applications.map((app, index) => (
               <motion.div
                 key={app.industry}
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ x: 8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                 className="group"
               >
-                <div className="p-8 bg-background rounded-2xl border-l-4 border-primary hover:border-primary/70 transition-all duration-300 hover:shadow-lg">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                    {app.industry}
-                  </h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {app.description}
-                  </p>
+                <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-background to-muted/30 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl">
+                  <div className="mb-6">
+                    <div className="h-2 w-20 bg-gradient-to-r from-primary to-primary/40 rounded-full" />
+                  </div>
+                  <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{app.industry}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{app.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -291,19 +307,26 @@ export default function Samee() {
         </div>
       </section>
 
-      {/* CTA Section - Clean and Simple */}
-      <section className="py-32">
+      {/* CTA Section - Full Width with Background */}
+      <section className="relative py-32 overflow-hidden">
+        <img
+          src="https://harmless-tapir-303.convex.cloud/api/storage/c750e4c6-3f16-4d0f-b8ad-89d9006d4740"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-30 select-none pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/5 to-background/0" />
+        
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.25 }}
-          className="max-w-4xl mx-auto px-8 text-center"
+          className="relative z-10 max-w-4xl mx-auto px-8 text-center"
         >
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
             Need Industrial Electrical Solutions?
           </h2>
           <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-            Contact our SAMEE team to explore electrical equipment and systems for your industrial facility.
+            Contact our SAMEE team to explore electrical equipment and systems for your industrial facility
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-10 py-7 rounded-full shadow-lg">
