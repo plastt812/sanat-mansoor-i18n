@@ -435,7 +435,10 @@ export default function Samee() {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-muted-foreground">+98 (31) 3760 9171 / +98 (31) 3760 9168</span>
+                  <div className="text-muted-foreground">
+                    <div>+98 (31) 3760 9171</div>
+                    <div>+98 (31) 3760 9168</div>
+                  </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-primary mt-0.5" />
