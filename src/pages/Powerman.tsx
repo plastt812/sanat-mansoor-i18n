@@ -131,7 +131,7 @@ export default function Powerman() {
       {/* Hero Section - Full Width with Overlay */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="https://harmless-tapir-303.convex.cloud/api/storage/2bbcab05-180d-460f-b184-519c9f98ac09"
+          src="https://harmless-tapir-303.convex.cloud/api/storage/c6aced6b-6cc3-40e6-86a2-123ed1c8b0cf"
           alt=""
           className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
         />

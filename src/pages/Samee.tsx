@@ -134,7 +134,7 @@ export default function Samee() {
       {/* Hero Section - Full Width with Overlay */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <img
-          src="https://harmless-tapir-303.convex.cloud/api/storage/2bbcab05-180d-460f-b184-519c9f98ac09"
+          src="https://harmless-tapir-303.convex.cloud/api/storage/d319642c-0e49-43a2-987e-3573443c7899"
           alt=""
           className="absolute inset-0 h-full w-full object-cover select-none pointer-events-none"
         />
