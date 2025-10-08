@@ -166,13 +166,12 @@ export default function Samee() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:64px_64px]" />
         
         <div className="max-w-7xl mx-auto px-8 relative">
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.25 }}
-            className="mb-20"
-          >
-            <div className="max-w-3xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <motion.div
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.25 }}
+            >
               <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
                 Product Categories
               </div>
@@ -182,8 +181,22 @@ export default function Samee() {
               <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
                 Designed to make it easy to find the right equipment for any application, from sockets and plugs to cable festoon systems.
               </p>
-            </div>
-          </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.25 }}
+              className="rounded-2xl overflow-hidden"
+            >
+              <img
+                src="https://harmless-tapir-303.convex.cloud/api/storage/70120535-0c79-49c7-b81f-b6146b726723"
+                alt="SAMEE electrical equipment"
+                className="w-full h-[400px] object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
 
           <div className="space-y-0">
             {productCategories.map((category, index) => {
@@ -281,6 +294,20 @@ export default function Samee() {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Ensuring safety and operational uptime in challenging industrial conditions across multiple sectors
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            className="mb-12 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://harmless-tapir-303.convex.cloud/api/storage/4dcaf9d1-24d7-4098-a26e-5295fbe0a447"
+              alt="Industrial applications"
+              className="w-full h-[350px] object-cover"
+              loading="lazy"
+            />
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
