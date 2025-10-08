@@ -177,27 +177,26 @@ export default function Samie() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:64px_64px]" />
         
         <div className="max-w-7xl mx-auto px-8 relative">
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.25 }}
-            className="mb-16 rounded-2xl overflow-hidden"
-          >
-            <img
-              src="https://harmless-tapir-303.convex.cloud/api/storage/af0da33a-2751-4c3c-91a0-3ccfec6e59ab"
-              alt="Engineering capabilities"
-              className="w-full h-[400px] object-cover"
-              loading="lazy"
-            />
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <motion.div
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.25 }}
+              className="rounded-2xl overflow-hidden"
+            >
+              <img
+                src="https://harmless-tapir-303.convex.cloud/api/storage/af0da33a-2751-4c3c-91a0-3ccfec6e59ab"
+                alt="Engineering capabilities"
+                className="w-full h-[400px] object-cover"
+                loading="lazy"
+              />
+            </motion.div>
 
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.25 }}
-            className="mb-20"
-          >
-            <div className="max-w-3xl">
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.25 }}
+            >
               <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
                 Our Capabilities
               </div>
@@ -207,8 +206,8 @@ export default function Samie() {
               <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
                 From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
               </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           <div className="space-y-0">
             {capabilities.map((cap, index) => {
