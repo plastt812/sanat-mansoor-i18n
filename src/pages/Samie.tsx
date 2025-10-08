@@ -203,7 +203,7 @@ export default function Samie() {
             className="mb-16 rounded-2xl overflow-hidden"
           >
             <img
-              src="https://harmless-tapir-303.convex.cloud/api/storage/c750e4c6-3f16-4d0f-b8ad-89d9006d4740"
+              src="https://harmless-tapir-303.convex.cloud/api/storage/af0da33a-2751-4c3c-91a0-3ccfec6e59ab"
               alt="Engineering capabilities"
               className="w-full h-[400px] object-cover"
               loading="lazy"
@@ -271,7 +271,7 @@ export default function Samie() {
             className="mb-12 rounded-2xl overflow-hidden"
           >
             <img
-              src="https://harmless-tapir-303.convex.cloud/api/storage/f3606006-bd0d-4bac-bd45-c1bdf47d7b12"
+              src="https://harmless-tapir-303.convex.cloud/api/storage/22db10ff-c21d-4982-87a5-966a801a682f"
               alt="Industrial solutions"
               className="w-full h-[350px] object-cover"
               loading="lazy"
