@@ -331,7 +331,7 @@ export default function Contact() {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                  <span className="text-muted-foreground">+98 (31) 3760 9171 / +98 (31) 3760 9168</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-primary mt-0.5" />
