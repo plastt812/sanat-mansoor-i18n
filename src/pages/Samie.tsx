@@ -182,20 +182,6 @@ export default function Samie() {
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.25 }}
-              className="rounded-2xl overflow-hidden"
-            >
-              <img
-                src="https://harmless-tapir-303.convex.cloud/api/storage/af0da33a-2751-4c3c-91a0-3ccfec6e59ab"
-                alt="Engineering capabilities"
-                className="w-full h-[400px] object-cover"
-                loading="lazy"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 20, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: false, amount: 0.25 }}
             >
               <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
                 Our Capabilities
@@ -206,6 +192,20 @@ export default function Samie() {
               <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
                 From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
               </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.25 }}
+              className="rounded-2xl overflow-hidden"
+            >
+              <img
+                src="https://harmless-tapir-303.convex.cloud/api/storage/af0da33a-2751-4c3c-91a0-3ccfec6e59ab"
+                alt="Engineering capabilities"
+                className="w-full h-[400px] object-cover"
+                loading="lazy"
+              />
             </motion.div>
           </div>
 
