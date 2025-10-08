@@ -158,7 +158,7 @@ export default function Contact() {
                       name="message"
                       placeholder="Tell us about your project..."
                       rows={8}
-                      className="min-h-[98px]"
+                      className="min-h-[150px]"
                       required
                     />
                   </div>
@@ -185,9 +185,9 @@ export default function Contact() {
             className="space-y-6 self-start"
           >
             <Card className="border-0">
-              <CardContent className="p-6 text-sm">
+              <CardContent className="p-6 text-md">
                 <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-primary mt-0.5" />
+                  <Phone className="h-10 w-10 text-primary mt-0.5" />
                   <div>
                     <div className="font-semibold">Phone</div>
                     <div className="text-muted-foreground">+98 (31) 3760 9171<br />+98 (31) 3760 9168</div>
@@ -197,9 +197,9 @@ export default function Contact() {
             </Card>
 
             <Card className="border-0">
-              <CardContent className="p-6 text-sm">
+              <CardContent className="p-6 text-md">
                 <div className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-primary mt-0.5" />
+                  <Mail className="h-10 w-10 text-primary mt-0.5" />
                   <div>
                     <div className="font-semibold">Email</div>
                     <div className="text-muted-foreground">info@sanatmansoor.com</div>
@@ -209,9 +209,9 @@ export default function Contact() {
             </Card>
 
             <Card className="border-0">
-              <CardContent className="p-6 text-sm">
+              <CardContent className="p-6 text-md">
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5" />
+                  <MapPin className="h-15 w-15 text-primary mt-0.5" />
                   <div>
                     <div className="font-semibold">Address</div>
                     <div className="text-muted-foreground">
