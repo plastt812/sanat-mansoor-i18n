@@ -181,6 +181,20 @@ export default function Samie() {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
+            className="mb-16 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://harmless-tapir-303.convex.cloud/api/storage/af0da33a-2751-4c3c-91a0-3ccfec6e59ab"
+              alt="Engineering capabilities"
+              className="w-full h-[400px] object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
             className="mb-20"
           >
             <div className="max-w-3xl">
@@ -194,20 +208,6 @@ export default function Samie() {
                 From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
               </p>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, amount: 0.25 }}
-            className="mb-16 rounded-2xl overflow-hidden"
-          >
-            <img
-              src="https://harmless-tapir-303.convex.cloud/api/storage/af0da33a-2751-4c3c-91a0-3ccfec6e59ab"
-              alt="Engineering capabilities"
-              className="w-full h-[400px] object-cover"
-              loading="lazy"
-            />
           </motion.div>
 
           <div className="space-y-0">
