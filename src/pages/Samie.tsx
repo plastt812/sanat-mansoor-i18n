@@ -196,6 +196,20 @@ export default function Samie() {
             </div>
           </motion.div>
 
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            className="mb-16 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://harmless-tapir-303.convex.cloud/api/storage/c750e4c6-3f16-4d0f-b8ad-89d9006d4740"
+              alt="Engineering capabilities"
+              className="w-full h-[400px] object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+
           <div className="space-y-0">
             {capabilities.map((cap, index) => {
               const Icon = cap.icon;
@@ -248,6 +262,20 @@ export default function Samie() {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Proven industrial equipment and machinery designed for maximum performance and reliability
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.25 }}
+            className="mb-12 rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://harmless-tapir-303.convex.cloud/api/storage/f3606006-bd0d-4bac-bd45-c1bdf47d7b12"
+              alt="Industrial solutions"
+              className="w-full h-[350px] object-cover"
+              loading="lazy"
+            />
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
