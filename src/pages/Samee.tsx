@@ -442,7 +442,7 @@ export default function Samee() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail className="h-5 w-5 text-primary mt-0.5" />
-                  <span className="text-muted-foreground">info@sanatmansoor.com</span>
+                  <span className="text-muted-foreground">info@smansoor.com</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-0.5" />
