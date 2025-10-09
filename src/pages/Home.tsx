@@ -601,7 +601,7 @@ export default function Home() {
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="font-bold mb-2">Email Us</h3>
-                  <p className="text-muted-foreground">info@sanatmansoor.com</p>
+                  <p className="text-muted-foreground">info@smansoor.com</p>
                 </CardContent>
               </Card>
             </motion.div>
