@@ -581,9 +581,9 @@ export default function Home() {
             >
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
-                  <Phone className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-bold mb-2">Call Us</h3>
-                  <div className="text-muted-foreground">
+                  <Phone className="h-16 w-16 text-primary mx-auto mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Call Us</h3>
+                  <div className="text-muted-foreground text-lg">
                     <div>+98 (31) 3760 9171</div>
                     <div>+98 (31) 3760 9168</div>
                   </div>
@@ -602,9 +602,9 @@ export default function Home() {
             >
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
-                  <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-bold mb-2">Email Us</h3>
-                  <p className="text-muted-foreground">info@smansoor.com</p>
+                  <Mail className="h-16 w-16 text-primary mx-auto mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Email Us</h3>
+                  <p className="text-muted-foreground text-lg">info@smansoor.com</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -620,9 +620,9 @@ export default function Home() {
             >
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
-                  <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-bold mb-2">Visit Us</h3>
-                  <p className="text-muted-foreground">#78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran</p>
+                  <MapPin className="h-16 w-16 text-primary mx-auto mb-6" />
+                  <h3 className="text-xl font-bold mb-3">Visit Us</h3>
+                  <p className="text-muted-foreground text-lg">#78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran</p>
                 </CardContent>
               </Card>
             </motion.div>
