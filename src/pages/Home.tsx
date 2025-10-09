@@ -583,7 +583,10 @@ export default function Home() {
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <Phone className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="font-bold mb-2">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <div className="text-muted-foreground">
+                    <div>+98 (31) 3760 9171</div>
+                    <div>+98 (31) 3760 9168</div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
