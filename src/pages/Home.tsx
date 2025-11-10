@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router";
-import { useTranslation } from "react-i18next";
-import { LanguageToggle } from "@/components/LanguageToggle";
 import { 
   Factory, 
   Shield, 
@@ -25,7 +23,6 @@ import {
 
 export default function Home() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
 
   const features = [
     {
@@ -107,35 +104,34 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  {t('nav.brands')}
+                  Brands
                   <ChevronDown className="h-4 w-4" />
                 </span>
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">{t('brands.samie')}</div>
-                      <div className="text-xs text-muted-foreground">{t('brands.samieDesc')}</div>
+                      <div className="font-semibold">SAMIE</div>
+                      <div className="text-xs text-muted-foreground">Heavy Industrial Equipment</div>
                     </a>
                     <a href="/brands/powerman" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">{t('brands.powerman')}</div>
-                      <div className="text-xs text-muted-foreground">{t('brands.powermanDesc')}</div>
+                      <div className="font-semibold">POWERMAN</div>
+                      <div className="text-xs text-muted-foreground">High-Pressure Hydraulic Tools</div>
                     </a>
                     <a href="/brands/samee" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">{t('brands.samee')}</div>
-                      <div className="text-xs text-muted-foreground">{t('brands.sameeDesc')}</div>
+                      <div className="font-semibold">SAMEE</div>
+                      <div className="text-xs text-muted-foreground">Electrical Equipment</div>
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.aboutUs')}</a>
-              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contactUs')}</a>
-              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalogs')}</a>
-              <LanguageToggle />
+              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
+              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">Catalogs</a>
               <Button 
                 onClick={() => navigate("/contact")}
                 className="ml-4"
               >
-                {t('nav.getStarted')}
+                Get Started
               </Button>
             </div>
           </div>
@@ -152,33 +148,36 @@ export default function Home() {
               className="absolute inset-0 h-full w-full object-cover opacity-50 select-none pointer-events-none"
             />
             <div className="relative z-10 px-6 flex flex-col items-center justify-center text-center">
+              
+              
               <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                {t('home.heroTitle')}
+                Innovating Industrial Solutions Since 1948
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                {t('home.heroSubtitle')}
+                Sanat Mansoor (SMC) leads with over 1,000 groundbreaking projects across seven product segments.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-                  <Button 
-                    size="lg" 
-                    onClick={() => navigate("/contact")}
-                    className="text-lg px-8 py-6"
-                  >
-                    {t('home.startProject')}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-                  <Button variant="outline" size="lg" className="text-lg px-8 py-6"
-                    onClick={() =>
-                      document.getElementById("capabilities")?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    {t('home.viewCapabilities')}
-                  </Button>
-                </motion.div>
-              </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+              <Button 
+                size="lg" 
+                onClick={() => navigate("/contact")}
+                className="text-lg px-8 py-6"
+              >
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-6"
+                // Smooth scroll to the Capabilities section
+                onClick={() =>
+                  document.getElementById("capabilities")?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                View Capabilities
+              </Button>
+            </motion.div>
+          </div>
             </div>
           </div>
         </div>
