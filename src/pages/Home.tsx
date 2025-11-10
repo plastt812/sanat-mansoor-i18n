@@ -51,10 +51,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: "50+", label: "Years Experience" },
-    { number: "1000+", label: "Projects" },
-    { number: "200+", label: "Experts" },
-    { number: "99.9%", label: "Quality Rating" }
+            { number: "50+", label: t('home.yearsExperience') },
+            { number: "1000+", label: t('home.projects') },
+            { number: "200+", label: t('home.experts') },
+            { number: "99.9%", label: t('home.qualityRating') }
   ];
 
   const services = [
@@ -155,10 +155,10 @@ export default function Home() {
               
               
               <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                Innovating Industrial Solutions Since 1948
+                {t('home.heroTitle')}
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                Sanat Mansoor (SMC) leads with over 1,000 groundbreaking projects across seven product segments.
+                {t('home.heroSubtitle')}
               </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
@@ -167,7 +167,7 @@ export default function Home() {
                 onClick={() => navigate("/contact")}
                 className="text-lg px-8 py-6"
               >
-                Start Your Project
+                {t('home.startProject')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
@@ -178,7 +178,7 @@ export default function Home() {
                   document.getElementById("capabilities")?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                View Capabilities
+                {t('home.viewCapabilities')}
               </Button>
             </motion.div>
           </div>
@@ -236,11 +236,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Our Brands
+              {t('home.ourBrands')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Three specialized brands deliver end‑to‑end industrial solutions across heavy equipment,
-              high‑pressure hydraulics, and electrical systems.
+              {t('home.brandsDesc')}
             </p>
           </motion.div>
 
@@ -261,7 +260,7 @@ export default function Home() {
                     className="h-12 w-auto mb-4 mx-auto object-contain"
                     loading="lazy"
                   />
-                  <h3 className="text-xl font-bold mb-2 text-center">SAMIE — Heavy Industrial Equipment</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center">SAMIE</h3>
                   <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
                     <li>• Cone crushers, HPGR, liner handlers</li>
                     <li>• Journal bearings</li>
@@ -286,7 +285,7 @@ export default function Home() {
                     className="h-12 w-auto mb-4 mx-auto object-contain"
                     loading="lazy"
                   />
-                  <h3 className="text-xl font-bold mb-2 text-center">POWERMAN — High‑Pressure Hydraulic Tools</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center">POWERMAN</h3>
                   <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
                     <li>• Cylinders, pumps, torque wrenches</li>
                     <li>• Crimping & cutting heads</li>
@@ -311,7 +310,7 @@ export default function Home() {
                     className="h-12 w-auto mb-4 mx-auto object-contain"
                     loading="lazy"
                   />
-                  <h3 className="text-xl font-bold mb-2 text-center">SAMEE — Electrical Equipment</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center">SAMEE</h3>
                   <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
                     <li>• Industrial plugs & sockets</li>
                     <li>• Cable festoon systems</li>
@@ -332,12 +331,12 @@ export default function Home() {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
             >
-              <h2 className="text-4xl font-bold tracking-tight mb-6">
-                Industries We Serve
-              </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                With more than 50 years of experience, Sanat Mansoor has gained the technical expertise in delivering industrial solutions for virtually every industry.
-              </p>
+            <h2 className="text-4xl font-bold tracking-tight mb-6">
+              {t('home.industriesServe')}
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              {t('home.industriesDesc')}
+            </p>
               <div className="space-y-4">
                 {services.map((service, index) => (
                   <motion.div
@@ -388,10 +387,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Why Choose Sanat Mansoor
+              {t('home.whyChoose')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              With over 75 years of family-owned expertise, we craft solutions that thrive in the toughest industries.
+              {t('home.whyChooseDesc')}
             </p>
           </motion.div>
 
@@ -445,10 +444,10 @@ export default function Home() {
             className="mb-8 text-center"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Our Capabilities
+              {t('home.capabilities')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              From concept to commissioning, Sanat Mansoor delivers solutions built on engineering excellence:
+              {t('home.capabilitiesDesc')}
             </p>
           </motion.div>
 
@@ -499,21 +498,17 @@ export default function Home() {
               className="lg:col-span-2"
             >
               <h2 className="text-4xl font-bold tracking-tight mb-6">
-                Built on Excellence, Driven by Innovation
+                {t('home.aboutTitle')}
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  For over five decades, Sanat Mansoor has been at the forefront of manufacturing excellence. 
-                  We combine traditional craftsmanship with cutting-edge technology to deliver solutions that 
-                  exceed expectations.
+                  {t('home.aboutText1')}
                 </p>
                 <p>
-                  Our commitment to quality, sustainability, and customer satisfaction has made us a trusted 
-                  partner for industries ranging from aerospace to automotive, energy to electronics.
+                  {t('home.aboutText2')}
                 </p>
                 <p>
-                  With facilities across three continents and a team of world-class engineers, we're positioned 
-                  to handle projects of any scale and complexity.
+                  {t('home.aboutText3')}
                 </p>
               </div>
             </motion.div>
@@ -564,10 +559,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Ready to Start Your Project?
+              {t('home.readyStart')}
             </h2>
             <p className="text-xl text-muted-foreground">
-              Get in touch with our team to discuss your manufacturing needs
+              {t('home.readyStartDesc')}
             </p>
           </motion.div>
 
@@ -586,7 +581,7 @@ export default function Home() {
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <Phone className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-xl font-bold mb-3">Call Us</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('home.callUs')}</h3>
                   <div className="text-muted-foreground text-lg">
                     <div>+98 (31) 3760 9171</div>
                     <div>+98 (31) 3760 9168</div>
@@ -607,7 +602,7 @@ export default function Home() {
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <Mail className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-xl font-bold mb-3">Email Us</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('home.emailUs')}</h3>
                   <p className="text-muted-foreground text-lg">info@smansoor.com</p>
                 </CardContent>
               </Card>
@@ -625,7 +620,7 @@ export default function Home() {
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <MapPin className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-xl font-bold mb-3">Visit Us</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('home.visitUs')}</h3>
                   <p className="text-muted-foreground text-lg">#78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran</p>
                 </CardContent>
               </Card>
@@ -651,7 +646,7 @@ export default function Home() {
                 onClick={() => navigate("/contact")}
                 className="text-lg px-8 py-6"
               >
-                Get Started Today
+                {t('home.getStartedToday')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
@@ -681,26 +676,26 @@ export default function Home() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t('home.quickLinks')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t('home.home')}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t('nav.about')}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t('nav.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t('nav.catalogs')}
                   </a>
                 </li>
               </ul>
@@ -708,21 +703,21 @@ export default function Home() {
 
             {/* Our Brands */}
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t('home.ourBrandsFooter')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    SAMIE
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    POWERMAN
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    SAMEE
                   </a>
                 </li>
               </ul>
@@ -730,7 +725,7 @@ export default function Home() {
 
             {/* Contact */}
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t('home.contactFooter')}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -758,16 +753,16 @@ export default function Home() {
 
           {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t('home.copyright')}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t('home.company')}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t('home.support')}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t('nav.catalogs')}
               </a>
             </div>
           </div>

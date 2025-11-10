@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, FileText, Phone, Mail, MapPin , ChevronDown} from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 type Catalog = {
   title: string;
@@ -56,6 +58,7 @@ const catalogs = [
 
 export default function Catalogs() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen">
@@ -71,24 +74,13 @@ export default function Catalogs() {
             <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
+            <LanguageToggle />
             <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
-
-{/* old brandsssssssssssssssss
             <div className="relative group">
-              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
+              <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
                 Brands
+                <ChevronDown className="h-4 w-4" />
               </span>
-*/}
-               
-               <div className="relative group">
-                <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  Brands
-                  <ChevronDown className="h-4 w-4" />
-                </span>
-
-         
-
-
               <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
                   <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
@@ -105,8 +97,6 @@ export default function Catalogs() {
                   </a>
                 </div>
               </div>
-
-
             </div>
             <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
             <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
@@ -130,10 +120,10 @@ export default function Catalogs() {
           <div className="relative z-10 px-6 text-center">
             <Badge variant="secondary" className="mb-4">Library</Badge>
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-              Technical Catalogs & Downloads
+              {t('catalogs.title')}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Access up-to-date product catalogs across our brands. View online or download for offline use.
+              {t('catalogs.subtitle')}
             </p>
           </div>
         </div>
