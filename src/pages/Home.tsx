@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { 
   Factory, 
   Shield, 
@@ -23,6 +25,7 @@ import {
 
 export default function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const features = [
     {
@@ -48,10 +51,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: "50+", label: "Years Experience" },
-    { number: "1000+", label: "Projects" },
-    { number: "200+", label: "Experts" },
-    { number: "99.9%", label: "Quality Rating" }
+    { number: "50+", label: t('home.stats.experience') },
+    { number: "1000+", label: t('home.stats.projects') },
+    { number: "200+", label: t('home.stats.experts') },
+    { number: "99.9%", label: t('home.stats.quality') }
   ];
 
   const services = [
@@ -104,34 +107,35 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  Brands
+                  {t('nav.brands')}
                   <ChevronDown className="h-4 w-4" />
                 </span>
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMIE</div>
-                      <div className="text-xs text-muted-foreground">Heavy Industrial Equipment</div>
+                      <div className="font-semibold">{t('brands.samie')}</div>
+                      <div className="text-xs text-muted-foreground">{t('brands.samieDesc')}</div>
                     </a>
                     <a href="/brands/powerman" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">POWERMAN</div>
-                      <div className="text-xs text-muted-foreground">High-Pressure Hydraulic Tools</div>
+                      <div className="font-semibold">{t('brands.powerman')}</div>
+                      <div className="text-xs text-muted-foreground">{t('brands.powermanDesc')}</div>
                     </a>
                     <a href="/brands/samee" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMEE</div>
-                      <div className="text-xs text-muted-foreground">Electrical Equipment</div>
+                      <div className="font-semibold">{t('brands.samee')}</div>
+                      <div className="text-xs text-muted-foreground">{t('brands.sameeDesc')}</div>
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
-              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
-              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">Catalogs</a>
+              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a>
+              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalogs')}</a>
+              <LanguageToggle />
               <Button 
                 onClick={() => navigate("/contact")}
                 className="ml-4"
               >
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </div>
           </div>
@@ -148,36 +152,33 @@ export default function Home() {
               className="absolute inset-0 h-full w-full object-cover opacity-50 select-none pointer-events-none"
             />
             <div className="relative z-10 px-6 flex flex-col items-center justify-center text-center">
-              
-              
               <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                Innovating Industrial Solutions Since 1948
+                {t('home.heroTitle')}
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                Sanat Mansoor (SMC) leads with over 1,000 groundbreaking projects across seven product segments.
+                {t('home.heroSubtitle')}
               </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Button 
-                size="lg" 
-                onClick={() => navigate("/contact")}
-                className="text-lg px-8 py-6"
-              >
-                Start Your Project
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-6"
-                // Smooth scroll to the Capabilities section
-                onClick={() =>
-                  document.getElementById("capabilities")?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                View Capabilities
-              </Button>
-            </motion.div>
-          </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+                  <Button 
+                    size="lg" 
+                    onClick={() => navigate("/contact")}
+                    className="text-lg px-8 py-6"
+                  >
+                    {t('home.startProject')}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+                  <Button variant="outline" size="lg" className="text-lg px-8 py-6"
+                    onClick={() =>
+                      document.getElementById("capabilities")?.scrollIntoView({ behavior: "smooth" })
+                    }
+                  >
+                    {t('home.viewCapabilities')}
+                  </Button>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -659,7 +660,6 @@ export default function Home() {
       <footer className="bg-background border-t">
         <div className="max-w-7xl mx-auto px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-            {/* Brand + Description */}
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img
@@ -670,63 +670,59 @@ export default function Home() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Engineering durable, high‑performance industrial solutions across heavy equipment,
-                hydraulics, and electrical systems—trusted since 1948.
+                {t('footer.description')}
               </p>
             </div>
 
-            {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t('nav.home')}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t('nav.about')}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t('nav.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t('nav.catalogs')}
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Our Brands */}
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t('footer.ourBrands')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    {t('brands.samie')} — {t('brands.samieDesc')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    {t('brands.powerman')} — {t('brands.powermanDesc')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    {t('brands.samee')} — {t('brands.sameeDesc')}
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Contact */}
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -742,28 +738,26 @@ export default function Home() {
                 <li className="flex items-start gap-3">
                   <MapPin className="h-9 w-9 text-primary mt-0.5" />
                   <span className="text-muted-foreground">
-                    #78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran
+                    {t('footer.address')}
                   </span>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Divider */}
           <div className="my-10 h-px bg-border" />
 
-          {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t('footer.copyright')}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t('footer.company')}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t('footer.support')}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t('nav.catalogs')}
               </a>
             </div>
           </div>

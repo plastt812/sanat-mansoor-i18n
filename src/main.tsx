@@ -12,6 +12,7 @@ import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 import "./index.css";
+import "./i18n/config";
 import NotFound from "./pages/NotFound.tsx";
 import "./types/global.d.ts";
 
