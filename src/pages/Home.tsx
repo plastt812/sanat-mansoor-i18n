@@ -668,8 +668,7 @@ export default function Home() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Engineering durable, high‑performance industrial solutions across heavy equipment,
-                hydraulics, and electrical systems—trusted since 1948.
+                {t('home.footerDesc')}
               </p>
             </div>
 
