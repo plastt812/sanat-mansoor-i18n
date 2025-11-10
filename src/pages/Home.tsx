@@ -30,23 +30,23 @@ export default function Home() {
   const features = [
     {
       icon: Shield,
-      title: "Unrivaled Durability",
-      description: "High-performance tools (up to 1,500 bar) and resilient electrical systems, engineered for safety and long-term reliability in harsh environments."
+      title: t('home.durability'),
+      description: t('home.durabilityDesc')
     },
     {
       icon: Wrench,
-      title: "Customized Precision",
-      description: "Tailored designs from SAMIE's machinery to SAMEE's cable systems, optimized for steel, mining, and energy challenges with unmatched adaptability."
+      title: t('home.precision'),
+      description: t('home.precisionDesc')
     },
     {
       icon: Zap,
-      title: "Proven Innovation",
-      description: "Over 1,000 pioneering projects, including first-of-their-kind solutions for global leaders, showcasing our commitment to cutting-edge excellence."
+      title: t('home.innovation'),
+      description: t('home.innovationDesc')
     },
     {
       icon: Users,
-      title: "Expert Partnership",
-      description: "A team of 200+ specialists and strategic alliances, like the Esfarayen Industrial Complex, delivering integrated support for your unique industrial needs."
+      title: t('home.partnership'),
+      description: t('home.partnershipDesc')
     }
   ];
 
@@ -60,33 +60,32 @@ export default function Home() {
   const services = [
     {
       emoji: "🏭",
-      title: "Steel Production",
-      description: "Bearings, rollers, crushers, and complete line equipment.",
+      title: t('home.steelProduction'),
+      description: t('home.steelDesc'),
     },
     {
       emoji: "🛢️",
-      title: "Mining",
-      description: "Crushers, HPGR systems, and hydraulic tools for extreme conditions.",
+      title: t('home.mining'),
+      description: t('home.miningDesc'),
     },
     {
       emoji: "⛏️",
-      title: "Oil & Gas",
-      description: "High-pressure hydraulic and electrical solutions for safety-critical operations.",
+      title: t('home.oilGas'),
+      description: t('home.oilGasDesc'),
     },
     {
       emoji: "⚡",
-      title: "Power Generation",
-      description: "Components and systems that keep power plants running.",
+      title: t('home.powerGeneration'),
+      description: t('home.powerDesc'),
     },
   ];
 
   // Add capabilities list
   const capabilities = [
-    { title: "Machining", description: "Precision and large-scale capabilities for complex parts." },
-    { title: "Casting", description: "Advanced foundry operations for critical industrial components." },
-    { title: "Welding & Fabrication", description: "Certified processes for durable assemblies." },
-    { title: "Reverse Engineering", description: "Extending the life of equipment through innovation." },
-    // { title: "After-Sales Service", description: "Spare parts, maintenance, and long-term support." },
+    { title: t('home.machining'), description: t('home.machiningDesc') },
+    { title: t('home.casting'), description: t('home.castingDesc') },
+    { title: t('home.welding'), description: t('home.weldingDesc') },
+    { title: t('home.reverseEng'), description: t('home.reverseEngDesc') },
   ];
 
   return (
@@ -260,11 +259,11 @@ export default function Home() {
                     className="h-12 w-auto mb-4 mx-auto object-contain"
                     loading="lazy"
                   />
-                  <h3 className="text-xl font-bold mb-2 text-center">SAMIE</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center">{t('nav.samie')}</h3>
                   <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
-                    <li>• Cone crushers, HPGR, liner handlers</li>
-                    <li>• Journal bearings</li>
-                    <li>• Complete production line solutions</li>
+                    <li>• {t('home.samieItem1')}</li>
+                    <li>• {t('home.samieItem2')}</li>
+                    <li>• {t('home.samieItem3')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -285,11 +284,11 @@ export default function Home() {
                     className="h-12 w-auto mb-4 mx-auto object-contain"
                     loading="lazy"
                   />
-                  <h3 className="text-xl font-bold mb-2 text-center">POWERMAN</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center">{t('nav.powerman')}</h3>
                   <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
-                    <li>• Cylinders, pumps, torque wrenches</li>
-                    <li>• Crimping & cutting heads</li>
-                    <li>• Accessories rated up to 700 bar</li>
+                    <li>• {t('home.powermanItem1')}</li>
+                    <li>• {t('home.powermanItem2')}</li>
+                    <li>• {t('home.powermanItem3')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -310,11 +309,11 @@ export default function Home() {
                     className="h-12 w-auto mb-4 mx-auto object-contain"
                     loading="lazy"
                   />
-                  <h3 className="text-xl font-bold mb-2 text-center">SAMEE</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center">{t('nav.samee')}</h3>
                   <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed">
-                    <li>• Industrial plugs & sockets</li>
-                    <li>• Cable festoon systems</li>
-                    <li>• Sirens for safe and durable operation</li>
+                    <li>• {t('home.sameeItem1')}</li>
+                    <li>• {t('home.sameeItem2')}</li>
+                    <li>• {t('home.sameeItem3')}</li>
                   </ul>
                 </CardContent>
               </Card>
