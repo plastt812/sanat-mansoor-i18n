@@ -14,6 +14,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 import "./index.css";
 import NotFound from "./pages/NotFound.tsx";
 import "./types/global.d.ts";
+import './i18n/config';
 
 function RouteSyncer() {
   const location = useLocation();
