@@ -51,10 +51,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: "50+", label: t('home.stats.experience') },
-    { number: "1000+", label: t('home.stats.projects') },
-    { number: "200+", label: t('home.stats.experts') },
-    { number: "99.9%", label: t('home.stats.quality') }
+    { number: "50+", label: "Years of Excellence" },
+    { number: "1000+", label: "Projects Delivered" },
+    { number: "200+", label: "Expert Engineers" },
+    { number: "99.9%", label: "Quality Assurance" }
   ];
 
   const services = [
@@ -107,35 +107,35 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-8">
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  {t('nav.brands')}
+                  Brands
                   <ChevronDown className="h-4 w-4" />
                 </span>
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">{t('brands.samie')}</div>
-                      <div className="text-xs text-muted-foreground">{t('brands.samieDesc')}</div>
+                      <div className="font-semibold">{t('brands.samie.name')}</div>
+                      <div className="text-xs text-muted-foreground">{t('brands.samie.description')}</div>
                     </a>
                     <a href="/brands/powerman" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">{t('brands.powerman')}</div>
-                      <div className="text-xs text-muted-foreground">{t('brands.powermanDesc')}</div>
+                      <div className="font-semibold">{t('brands.powerman.name')}</div>
+                      <div className="text-xs text-muted-foreground">{t('brands.powerman.description')}</div>
                     </a>
                     <a href="/brands/samee" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">{t('brands.samee')}</div>
-                      <div className="text-xs text-muted-foreground">{t('brands.sameeDesc')}</div>
+                      <div className="font-semibold">{t('brands.samee.name')}</div>
+                      <div className="text-xs text-muted-foreground">{t('brands.samee.description')}</div>
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</a>
-              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a>
-              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalogs')}</a>
+              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
+              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">Catalogs</a>
               <LanguageToggle />
               <Button 
                 onClick={() => navigate("/contact")}
                 className="ml-4"
               >
-                {t('nav.getStarted')}
+                Get Started
               </Button>
             </div>
           </div>
@@ -153,10 +153,10 @@ export default function Home() {
             />
             <div className="relative z-10 px-6 flex flex-col items-center justify-center text-center">
               <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                {t('home.heroTitle')}
+                {t('home.hero.title')}
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                {t('home.heroSubtitle')}
+                {t('home.hero.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
@@ -165,7 +165,7 @@ export default function Home() {
                     onClick={() => navigate("/contact")}
                     className="text-lg px-8 py-6"
                   >
-                    {t('home.startProject')}
+                    Start Your Project
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </motion.div>
@@ -175,7 +175,7 @@ export default function Home() {
                       document.getElementById("capabilities")?.scrollIntoView({ behavior: "smooth" })
                     }
                   >
-                    {t('home.viewCapabilities')}
+                    View Capabilities
                   </Button>
                 </motion.div>
               </div>
@@ -233,11 +233,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Our Brands
+              {t('home.ourBrands.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Three specialized brands deliver end‑to‑end industrial solutions across heavy equipment,
-              high‑pressure hydraulics, and electrical systems.
+              {t('home.ourBrands.subtitle')}
             </p>
           </motion.div>
 
@@ -333,7 +332,7 @@ export default function Home() {
                 Industries We Serve
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                With more than 50 years of experience, Sanat Mansoor has gained the technical expertise in delivering industrial solutions for virtually every industry.
+                {t('home.industries.subtitle')}
               </p>
               <div className="space-y-4">
                 {services.map((service, index) => (
@@ -385,10 +384,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Why Choose Sanat Mansoor
+              {t('home.whyChoose.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              With over 75 years of family-owned expertise, we craft solutions that thrive in the toughest industries.
+              {t('home.whyChoose.subtitle')}
             </p>
           </motion.div>
 
@@ -442,10 +441,10 @@ export default function Home() {
             className="mb-8 text-center"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Our Capabilities
+              {t('home.capabilities.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              From concept to commissioning, Sanat Mansoor delivers solutions built on engineering excellence:
+              {t('home.capabilities.subtitle')}
             </p>
           </motion.div>
 
@@ -500,17 +499,10 @@ export default function Home() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  For over five decades, Sanat Mansoor has been at the forefront of manufacturing excellence. 
-                  We combine traditional craftsmanship with cutting-edge technology to deliver solutions that 
-                  exceed expectations.
+                  {t('about.whoWeAre.description1')}
                 </p>
                 <p>
-                  Our commitment to quality, sustainability, and customer satisfaction has made us a trusted 
-                  partner for industries ranging from aerospace to automotive, energy to electronics.
-                </p>
-                <p>
-                  With facilities across three continents and a team of world-class engineers, we're positioned 
-                  to handle projects of any scale and complexity.
+                  {t('about.whoWeAre.description2')}
                 </p>
               </div>
             </motion.div>
@@ -527,12 +519,12 @@ export default function Home() {
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-8 text-center">
                   <FileText className="h-16 w-16 text-primary mb-6 mx-auto" />
-                  <h3 className="text-xl font-bold mb-4">Catalogs & Downloads</h3>
+                  <h3 className="text-xl font-bold mb-4">{t('home.catalogs.title')}</h3>
                   <p className="text-muted-foreground mb-6">
-                    Explore our latest catalogs to learn more about our products and services.
+                    {t('home.catalogs.description')}
                   </p>
                   <Button variant="outline" className="w-full" onClick={() => navigate("/catalogs")}>
-                    View Catalogs
+                    {t('home.catalogs.viewAll')}
                   </Button>
                 </CardContent>
               </Card>
@@ -561,10 +553,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Ready to Start Your Project?
+              {t('home.cta.title')}
             </h2>
             <p className="text-xl text-muted-foreground">
-              Get in touch with our team to discuss your manufacturing needs
+              {t('home.cta.subtitle')}
             </p>
           </motion.div>
 
@@ -583,7 +575,7 @@ export default function Home() {
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <Phone className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-xl font-bold mb-3">Call Us</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('home.cta.phone')}</h3>
                   <div className="text-muted-foreground text-lg">
                     <div>+98 (31) 3760 9171</div>
                     <div>+98 (31) 3760 9168</div>
@@ -604,7 +596,7 @@ export default function Home() {
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <Mail className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-xl font-bold mb-3">Email Us</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('home.cta.email')}</h3>
                   <p className="text-muted-foreground text-lg">info@smansoor.com</p>
                 </CardContent>
               </Card>
@@ -622,7 +614,7 @@ export default function Home() {
               <Card className="h-full border border-white/20 bg-background/70 backdrop-blur-mda">
                 <CardContent className="p-8 h-full flex flex-col items-center justify-center text-center">
                   <MapPin className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-xl font-bold mb-3">Visit Us</h3>
+                  <h3 className="text-xl font-bold mb-3">{t('home.cta.location')}</h3>
                   <p className="text-muted-foreground text-lg">#78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran</p>
                 </CardContent>
               </Card>
@@ -648,7 +640,7 @@ export default function Home() {
                 onClick={() => navigate("/contact")}
                 className="text-lg px-8 py-6"
               >
-                Get Started Today
+                {t('nav.getStarted')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
@@ -670,59 +662,59 @@ export default function Home() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                {t('footer.description')}
+                Engineering durable, high‑performance industrial solutions across heavy equipment, hydraulics, and electrical systems—trusted since 1948.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
+              <h4 className="font-semibold mb-3">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t('nav.home')}
+                    Home
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t('nav.about')}
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t('nav.contact')}
+                    Contact Us
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t('nav.catalogs')}
+                    Catalogs
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">{t('footer.ourBrands')}</h4>
+              <h4 className="font-semibold mb-3">Our Brands</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    {t('brands.samie')} — {t('brands.samieDesc')}
+                    {t('brands.samie.name')} — {t('brands.samie.description')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    {t('brands.powerman')} — {t('brands.powermanDesc')}
+                    {t('brands.powerman.name')} — {t('brands.powerman.description')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    {t('brands.samee')} — {t('brands.sameeDesc')}
+                    {t('brands.samee.name')} — {t('brands.samee.description')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
+              <h4 className="font-semibold mb-3">Contact</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -738,7 +730,7 @@ export default function Home() {
                 <li className="flex items-start gap-3">
                   <MapPin className="h-9 w-9 text-primary mt-0.5" />
                   <span className="text-muted-foreground">
-                    {t('footer.address')}
+                    #78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran
                   </span>
                 </li>
               </ul>
@@ -748,16 +740,16 @@ export default function Home() {
           <div className="my-10 h-px bg-border" />
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">{t('footer.copyright')}</p>
+            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t('footer.company')}
+                Company
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t('footer.support')}
+                Support
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t('nav.catalogs')}
+                Catalogs
               </a>
             </div>
           </div>
