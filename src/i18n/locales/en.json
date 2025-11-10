@@ -9,72 +9,264 @@
     "backToHome": "Back to Home"
   },
   "brands": {
-    "samie": "SAMIE",
-    "samieDesc": "Heavy Industrial Equipment",
-    "powerman": "POWERMAN",
-    "powermanDesc": "High-Pressure Hydraulic Tools",
-    "samee": "SAMEE",
-    "sameeDesc": "Electrical Equipment"
+    "samie": {
+      "name": "SAMIE",
+      "description": "Heavy Industrial Equipment"
+    },
+    "powerman": {
+      "name": "POWERMAN",
+      "description": "High-Pressure Hydraulic Tools"
+    },
+    "samee": {
+      "name": "SAMEE",
+      "description": "Electrical Equipment"
+    }
   },
   "home": {
-    "heroTitle": "Innovating Industrial Solutions Since 1948",
-    "heroSubtitle": "Sanat Mansoor (SMC) leads with over 1,000 groundbreaking projects across seven product segments.",
-    "startProject": "Start Your Project",
-    "viewCapabilities": "View Capabilities",
-    "stats": {
-      "experience": "Years Experience",
-      "projects": "Projects",
-      "experts": "Experts",
-      "quality": "Quality Rating"
+    "hero": {
+      "badge": "Industrial Manufacturing Excellence",
+      "title": "Engineering Solutions Built to Last",
+      "subtitle": "Precision-engineered machinery, hydraulic systems, and electrical equipment trusted by industries worldwide since 1948."
     },
-    "ourBrands": "Our Brands",
-    "ourBrandsDesc": "Three specialized brands deliver end‑to‑end industrial solutions across heavy equipment, high‑pressure hydraulics, and electrical systems.",
-    "industries": "Industries We Serve",
-    "industriesDesc": "With more than 50 years of experience, Sanat Mansoor has gained the technical expertise in delivering industrial solutions for virtually every industry.",
-    "whyChoose": "Why Choose Sanat Mansoor",
-    "whyChooseDesc": "With over 75 years of family-owned expertise, we craft solutions that thrive in the toughest industries.",
-    "capabilities": "Our Capabilities",
-    "capabilitiesDesc": "From concept to commissioning, Sanat Mansoor delivers solutions built on engineering excellence:",
-    "aboutTitle": "Built on Excellence, Driven by Innovation",
-    "catalogsCard": "Catalogs & Downloads",
-    "catalogsCardDesc": "Explore our latest catalogs to learn more about our products and services.",
-    "viewCatalogs": "View Catalogs",
-    "contactTitle": "Ready to Start Your Project?",
-    "contactDesc": "Get in touch with our team to discuss your manufacturing needs",
-    "callUs": "Call Us",
-    "emailUs": "Email Us",
-    "visitUs": "Visit Us",
-    "getStartedToday": "Get Started Today"
+    "stats": {
+      "years": "Years of Excellence",
+      "projects": "Projects Delivered",
+      "countries": "Countries Served",
+      "experts": "Expert Engineers"
+    },
+    "ourBrands": {
+      "title": "Our Brands",
+      "subtitle": "Three specialized brands delivering precision-engineered solutions across heavy equipment, hydraulics, and electrical systems."
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "subtitle": "Trusted by the world's most demanding sectors"
+    },
+    "whyChoose": {
+      "title": "Why Choose Sanat Mansoor",
+      "subtitle": "Decades of expertise, precision engineering, and unwavering commitment to quality",
+      "quality": {
+        "title": "Uncompromising Quality",
+        "description": "ISO-certified processes and rigorous testing ensure every product meets the highest standards."
+      },
+      "experience": {
+        "title": "Proven Track Record",
+        "description": "Over 1,000 successful projects delivered across steel, mining, oil & gas, and power generation."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "Investing in R&D and modern manufacturing to stay ahead of industry demands."
+      },
+      "support": {
+        "title": "Comprehensive Support",
+        "description": "From initial consultation to after-sales service, we're with you every step of the way."
+      }
+    },
+    "capabilities": {
+      "title": "Our Capabilities",
+      "subtitle": "End-to-end engineering and manufacturing solutions",
+      "design": {
+        "title": "Design & Engineering",
+        "description": "Custom solutions tailored to your specific requirements and industry standards."
+      },
+      "manufacturing": {
+        "title": "Precision Manufacturing",
+        "description": "State-of-the-art facilities producing components with micron-level accuracy."
+      },
+      "testing": {
+        "title": "Quality Assurance",
+        "description": "Comprehensive testing protocols ensuring reliability and performance."
+      },
+      "installation": {
+        "title": "Installation & Support",
+        "description": "Expert installation teams and ongoing technical support worldwide."
+      }
+    },
+    "about": {
+      "title": "About Sanat Mansoor",
+      "description": "For over 50 years, Sanat Mansoor has been a trusted partner in industrial manufacturing, delivering precision-engineered machinery, hydraulic systems, and electrical equipment to the world's most demanding industries.",
+      "learnMore": "Learn More About Us"
+    },
+    "catalogs": {
+      "title": "Catalogs & Downloads",
+      "description": "Access our comprehensive product catalogs and technical documentation.",
+      "viewAll": "View All Catalogs"
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "subtitle": "Get in touch with our team to discuss your requirements",
+      "phone": "Phone",
+      "email": "Email",
+      "location": "Location"
+    }
   },
   "contact": {
-    "title": "Let's build something that lasts",
-    "subtitle": "Reach out to discuss your project, request a quote, or learn more about our capabilities.",
-    "getInTouch": "Get in Touch with Sanat Mansoor",
-    "description": "For over 50 years, Sanat Mansoor (SMC) has been a trusted partner in industrial manufacturing, delivering precision-engineered machinery, hydraulic systems, and electrical equipment. Whether you have a question about a specific product, need a custom solution, or want to discuss a project, our team of experts is here to help. Reach out to us using the information below.",
+    "badge": "Contact Us",
+    "hero": {
+      "title": "Let's build something that lasts",
+      "subtitle": "Reach out to discuss your project, request a quote, or learn more about our capabilities."
+    },
+    "getInTouch": {
+      "title": "Get in Touch with Sanat Mansoor",
+      "description": "For over 50 years, Sanat Mansoor (SMC) has been a trusted partner in industrial manufacturing, delivering precision-engineered machinery, hydraulic systems, and electrical equipment. Whether you have a question about a specific product, need a custom solution, or want to discuss a project, our team of experts is here to help. Reach out to us using the information below."
+    },
     "form": {
       "name": "Name",
-      "email": "Email",
-      "company": "Company",
-      "message": "Message",
       "namePlaceholder": "Jane Doe",
+      "email": "Email",
       "emailPlaceholder": "name@example.com",
+      "company": "Company",
       "companyPlaceholder": "Your company",
+      "message": "Message",
       "messagePlaceholder": "Tell us about your project...",
-      "send": "Send Message"
+      "send": "Send Message",
+      "success": "Message sent",
+      "successDescription": "Thanks {{name}} — we'll get back to you shortly."
     },
-    "phone": "Phone",
-    "email": "Email",
-    "address": "Address",
-    "findUs": "Find Us Easily",
-    "findUsDesc": "Located within the Isfahan Province, SMC benefits from strategic partnerships that enhance our manufacturing capabilities. Whether you need hydraulic solutions for oil & gas, electrical systems for mining, or custom machinery for steel production, our experts are here to help."
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "addressText": "#78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran"
+    },
+    "map": {
+      "title": "Find Us Easily",
+      "description": "Located within the Isfahan Province, SMC benefits from strategic partnerships that enhance our manufacturing capabilities. Whether you need hydraulic solutions for oil & gas, electrical systems for mining, or custom machinery for steel production, our experts are here to help."
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "hero": {
+      "title": "Engineering Excellence Since 1948",
+      "subtitle": "We design, build, and deliver industrial solutions with a legacy of precision, innovation, and trusted partnerships."
+    },
+    "whoWeAre": {
+      "badge": "Who We Are",
+      "title": "A family-built industrial partner since 1948",
+      "subtitle": "Precision manufacturing, integrated engineering, and long-term partnerships across the world's most demanding industries.",
+      "description1": "Sanat Mansoor is a family-owned industrial company with a history dating back to 1948. From our early beginnings as a small engineering workshop, we have grown into a trusted partner for some of the most demanding industries in the world. Over the decades, we have successfully delivered more than 1,000 projects, building a reputation for reliability, precision, and innovation.",
+      "description2": "For over 50 years, we have worked alongside leaders in steel production, oil & gas, mining, power generation, and construction. Each project has reinforced our commitment to engineering excellence and long-term partnerships. Today, Sanat Mansoor continues to combine tradition with innovation — delivering solutions that stand the test of time."
+    },
+    "metrics": {
+      "title": "Key Metrics",
+      "since": "Since",
+      "heritage": "Heritage of excellence",
+      "team": "Team",
+      "experts": "experts",
+      "integrated": "Integrated engineering",
+      "delivery": "On‑Time Delivery",
+      "reliability": "Reliability you can plan on",
+      "projects": "Projects",
+      "outcomes": "Proven outcomes"
+    },
+    "legacy": {
+      "title": "Our Legacy",
+      "description": "For over 50 years, we have worked alongside leaders in steel production, oil & gas, mining, power generation, and construction. Each project has reinforced our commitment to engineering excellence and long-term partnerships. Today, Sanat Mansoor continues to combine tradition with innovation — delivering solutions that stand the test of time."
+    },
+    "featuredProjects": {
+      "title": "Featured Projects",
+      "subtitle": "A snapshot of recent, high‑impact engagements across steel, energy, and mining—delivered with precision and measurable results.",
+      "steel": {
+        "title": "Steel Mill Retrofit",
+        "description": "HPGR integration and bearing redesign to increase throughput and reduce downtime.",
+        "metric1": "+12% line capacity",
+        "metric2": "18% maintenance reduction"
+      },
+      "hydraulic": {
+        "title": "Offshore Hydraulic Overhaul",
+        "description": "High‑pressure systems upgrade with redundancy and safety interlocks.",
+        "metric1": "700 bar certified",
+        "metric2": "Zero unplanned shutdowns"
+      },
+      "power": {
+        "title": "Power Plant Alignment",
+        "description": "Precision alignment and vibration mitigation for turbine assemblies.",
+        "metric1": "99.9% uptime",
+        "metric2": "ISO 9001 compliant"
+      }
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "description": "Our products and services are trusted where performance is critical. From heavy industry to energy, we deliver systems engineered to endure.",
+      "steel": "Steel Production",
+      "mining": "Mining",
+      "oil": "Oil & Gas",
+      "power": "Power Generation"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "quality": {
+        "title": "Quality First",
+        "description": "Relentless focus on precision, repeatability, and reliability."
+      },
+      "customer": {
+        "title": "Customer-Centric",
+        "description": "Partnerships built on trust, transparency, and outcomes."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Modern processes and continuous improvement at every layer."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We do the right thing, especially when no one is watching."
+      }
+    },
+    "vision": {
+      "title": "Our Vision for the Future",
+      "description": "As we look ahead, our mission remains clear: to provide innovative, reliable, and sustainable solutions that empower industries worldwide. We are committed to continuous improvement, investing in advanced technologies, and building partnerships that last."
+    }
+  },
+  "catalogs": {
+    "badge": "Library",
+    "hero": {
+      "title": "Technical Catalogs & Downloads",
+      "subtitle": "Access up-to-date product catalogs across our brands. View online or download for offline use."
+    },
+    "items": {
+      "capability": {
+        "title": "Company — Capability Statement",
+        "description": "Company profile, sectors, and integrated capabilities."
+      },
+      "samieSteel": {
+        "title": "SAMIE — Steel",
+        "description": "Comprehensive catalog for steel industry equipment and solutions."
+      },
+      "samieMining": {
+        "title": "SAMIE — Mining",
+        "description": "Equipment and systems designed for mining applications."
+      },
+      "samieBearings": {
+        "title": "SAMIE — Journal Bearings",
+        "description": "Technical specs and product range for journal bearings."
+      },
+      "samieGeneral": {
+        "title": "SAMIE — General",
+        "description": "General product overview and capabilities from SAMIE."
+      },
+      "powermanGeneral": {
+        "title": "POWERMAN — General",
+        "description": "Hydraulic tools overview, specs, and use cases."
+      },
+      "powermanBolting": {
+        "title": "POWERMAN — Bolting",
+        "description": "High‑pressure bolting solutions and torque systems."
+      },
+      "samee": {
+        "title": "SAMEE — Electrical Equipment",
+        "description": "Industrial plugs, sockets, festoon systems, and sirens."
+      }
+    },
+    "viewPdf": "View PDF",
+    "download": "Download",
+    "needCatalog": "Need a specific catalog? Contact our team"
   },
   "footer": {
     "description": "Engineering durable, high‑performance industrial solutions across heavy equipment, hydraulics, and electrical systems—trusted since 1948.",
     "quickLinks": "Quick Links",
     "ourBrands": "Our Brands",
     "contact": "Contact",
-    "address": "#78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran",
-    "copyright": "© 2025 Sanat Mansoor. All rights reserved.",
+    "rights": "© 2025 Sanat Mansoor. All rights reserved.",
     "company": "Company",
     "support": "Support"
   }
