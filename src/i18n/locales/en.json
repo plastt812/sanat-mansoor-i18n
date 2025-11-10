@@ -126,5 +126,48 @@
     "sameeDesc": "Electrical Equipment and Systems",
     "download": "Download",
     "view": "View"
+  },
+  "samie": {
+    "badge": "Industrial Projects",
+    "heroTitle": "Machine Design & Fabrication",
+    "heroSubtitle": "Over 50 years of engineering excellence in complex machinery and equipment for the world's most demanding industries",
+    "capabilitiesLabel": "Our Capabilities",
+    "capabilitiesTitle": "Engineering Excellence for Every Industry",
+    "capabilitiesDesc": "From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.",
+    "solutionsTitle": "Our Flagship Solutions",
+    "solutionsDesc": "Proven industrial equipment and machinery designed for maximum performance and reliability",
+    "ctaTitle": "Ready to Discuss Your Project?",
+    "ctaDesc": "Contact our SAMIE team to explore custom machinery solutions tailored to your industrial needs",
+    "ctaButton": "Get in Touch"
+  },
+  "powerman": {
+    "badge": "Industrial Hydraulic Equipment",
+    "heroTitle": "Cylinders, Pumps & Tools",
+    "heroSubtitle": "Reliable, Durable, and Safe High-Pressure Hydraulic Equipment for any application requiring applied force",
+    "collectionsLabel": "Tool Collections",
+    "collectionsTitle": "Powerman Tool Collections",
+    "collectionsDesc": "An extensive range of tools to ensure that even your most demanding application can be undertaken with the highest degree of safety and accuracy.",
+    "featuresTitle": "Key Features and Applications",
+    "featuresDesc": "High-power hydraulic solutions designed for precision, portability, and maximum operational uptime.",
+    "applicationsTitle": "Industry Applications",
+    "applicationsDesc": "Delivering energy savings and reduced downtime in hazardous environments across multiple industries",
+    "ctaTitle": "Need High-Pressure Hydraulic Solutions?",
+    "ctaDesc": "Contact our POWERMAN team to explore hydraulic tools and equipment for your specific application",
+    "ctaButton": "Get in Touch"
+  },
+  "samee": {
+    "badge": "Industrial Electrical Equipment",
+    "heroTitle": "Outlets & Plugs, Cable Trolleys, Alarm Sirens",
+    "heroSubtitle": "SAMEE combines the widest selection of industrial sockets and plugs, sirens, and cable festoon systems with reliability, durability, and built-in safety.",
+    "categoriesLabel": "Product Categories",
+    "categoriesTitle": "Comprehensive Electrical Solutions",
+    "categoriesDesc": "Designed to make it easy to find the right equipment for any application, from sockets and plugs to cable festoon systems.",
+    "featuresTitle": "Key Features and Applications",
+    "featuresDesc": "Robust electrical solutions with IP-rated protection, corrosion resistance, and easy installation for high-load environments.",
+    "applicationsTitle": "Industry Applications",
+    "applicationsDesc": "Ensuring safety and operational uptime in challenging industrial conditions across multiple sectors",
+    "ctaTitle": "Need Industrial Electrical Solutions?",
+    "ctaDesc": "Contact our SAMEE team to explore electrical equipment and systems for your industrial facility",
+    "ctaButton": "Get in Touch"
   }
 }

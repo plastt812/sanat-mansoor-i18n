@@ -91,12 +91,12 @@ export default function Contact() {
           />
           <div className="absolute inset-0 bg-background/40" />
           <div className="relative z-10 px-6 text-center">
-            <Badge variant="secondary" className="mb-4">Contact Us</Badge>
+            <Badge variant="secondary" className="mb-4">{t("nav.contact")}</Badge>
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-              Let's build something that lasts
+              {t("contact.title")}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Reach out to discuss your project, request a quote, or learn more about our capabilities.
+              {t("contact.subtitle")}
             </p>
           </div>
         </div>
@@ -111,13 +111,10 @@ export default function Contact() {
             viewport={{ once: false, amount: 0.25 }}
           >
             <h2 className="text-3xl font-bold tracking-tight mb-4">
-              Get in Touch with Sanat Mansoor
+              {t("contact.title")}
             </h2>
             <p className="text-lg text-muted-foreground">
-              For over 50 years, Sanat Mansoor (SMC) has been a trusted partner in industrial manufacturing,
-              delivering precision-engineered machinery, hydraulic systems, and electrical equipment. Whether you
-              have a question about a specific product, need a custom solution, or want to discuss a project, our
-              team of experts is here to help. Reach out to us using the information below.
+              {t("contact.subtitle")}
             </p>
 
 
@@ -145,22 +142,22 @@ export default function Contact() {
               <CardContent className="p-8">
                 <form onSubmit={onSubmit} className="grid sm:grid-cols-2 gap-6">
                   <div className="sm:col-span-1">
-                    <label className="text-sm font-medium mb-2 block">Name</label>
-                    <Input name="name" placeholder="Jane Doe" required />
+                    <label className="text-sm font-medium mb-2 block">{t("contact.name")}</label>
+                    <Input name="name" placeholder={t("contact.name")} required />
                   </div>
                   <div className="sm:col-span-1">
-                    <label className="text-sm font-medium mb-2 block">Email</label>
-                    <Input name="email" type="email" placeholder="name@example.com" required />
+                    <label className="text-sm font-medium mb-2 block">{t("contact.email")}</label>
+                    <Input name="email" type="email" placeholder={t("contact.email")} required />
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="text-sm font-medium mb-2 block">Company</label>
-                    <Input name="company" placeholder="Your company" />
+                    <label className="text-sm font-medium mb-2 block">{t("contact.phone")}</label>
+                    <Input name="company" placeholder={t("contact.phone")} />
                   </div>
                   <div className="sm:col-span-2">
-                    <label className="text-sm font-medium mb-2 block">Message</label>
+                    <label className="text-sm font-medium mb-2 block">{t("contact.message")}</label>
                     <Textarea
                       name="message"
-                      placeholder="Tell us about your project..."
+                      placeholder={t("contact.message")}
                       rows={8}
                       className="min-h-[150px]"
                       required
@@ -171,7 +168,7 @@ export default function Contact() {
                   <div className="sm:col-span-2">
                     <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block">
                       <Button type="submit" className="px-8">
-                        Send Message
+                        {t("contact.send")}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </motion.div>
@@ -193,7 +190,7 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <Phone className="h-10 w-10 text-primary mt-0.5" />
                   <div>
-                    <div className="font-semibold">Phone</div>
+                    <div className="font-semibold">{t("contact.phone_label")}</div>
                     <div className="text-muted-foreground">+98 (31) 3760 9171<br />+98 (31) 3760 9168</div>
                   </div>
                 </div>
@@ -205,8 +202,8 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <Mail className="h-10 w-10 text-primary mt-0.5" />
                   <div>
-                    <div className="font-semibold">Email</div>
-                    <div className="text-muted-foreground">info@sanatmansoor.com</div>
+                    <div className="font-semibold">{t("contact.email_label")}</div>
+                    <div className="text-muted-foreground">info@smansoor.com</div>
                   </div>
                 </div>
               </CardContent>
@@ -217,7 +214,7 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <MapPin className="h-15 w-15 text-primary mt-0.5" />
                   <div>
-                    <div className="font-semibold">Address</div>
+                    <div className="font-semibold">{t("contact.address")}</div>
                     <div className="text-muted-foreground">
                       #78, 9th Street, Oshtorjan Industrial City, Isfahan Province, Iran
                     </div>
@@ -235,11 +232,9 @@ export default function Contact() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.25 }}
           >
-            <h2 className="text-2xl font-bold tracking-tight">Find Us Easily</h2>
+            <h2 className="text-2xl font-bold tracking-tight">{t("contact.address")}</h2>
             <p className="text-muted-foreground">
-              Located within the Isfahan Province, SMC benefits from strategic partnerships that enhance our
-              manufacturing capabilities. Whether you need hydraulic solutions for oil &amp; gas, electrical
-              systems for mining, or custom machinery for steel production, our experts are here to help.
+              {t("contact.hoursDesc")}
             </p>
           </motion.div>
 
@@ -282,26 +277,26 @@ export default function Contact() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t("home.quickLinks")}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t("home.home")}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t("nav.about")}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t("nav.contact")}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t("nav.catalogs")}
                   </a>
                 </li>
               </ul>
@@ -309,21 +304,21 @@ export default function Contact() {
 
             {/* Our Brands */}
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t("home.ourBrandsFooter")}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    {t("nav.samie")} — {t("nav.samieDesc")}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    {t("nav.powerman")} — {t("nav.powermanDesc")}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    {t("nav.samee")} — {t("nav.sameeDesc")}
                   </a>
                 </li>
               </ul>
@@ -331,7 +326,7 @@ export default function Contact() {
 
             {/* Contact */}
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t("home.contactFooter")}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -356,16 +351,16 @@ export default function Contact() {
 
           {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t("home.copyright")}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t("home.company")}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t("home.support")}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t("nav.catalogs")}
               </a>
             </div>
           </div>
