@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,14 +9,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, ArrowRight , ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 export default function Contact() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    toast("Message sent", {
+    toast(t("contact.send"), {
       description: `Thanks ${data.get("name") || "there"} — we'll get back to you shortly.`,
     });
     (e.currentTarget as HTMLFormElement).reset();
@@ -39,6 +42,7 @@ export default function Contact() {
               <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <LanguageToggle />
               <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
 
 

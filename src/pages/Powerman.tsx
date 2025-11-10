@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, ArrowRight, CheckCircle, ChevronDown, Wrench, Zap, Settings, Droplet, Mountain, Factory } from "lucide-react";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useTranslation } from "react-i18next";
 
 export default function Powerman() {
   const navigate = useNavigate();
@@ -94,6 +96,7 @@ export default function Powerman() {
               <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <LanguageToggle />
               <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">

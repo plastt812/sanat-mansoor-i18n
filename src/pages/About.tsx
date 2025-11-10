@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,9 +22,11 @@ import {
 } from "lucide-react";
 import { Phone, Mail, MapPin , ChevronDown } from "lucide-react";
 import { Calendar } from "lucide-react";
+import { LanguageToggle } from "@/components/LanguageToggle";
 
 export default function About() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const values = [
     { icon: BadgeCheck, title: "Quality First", desc: "Relentless focus on precision, repeatability, and reliability." },
@@ -55,6 +58,7 @@ export default function About() {
               <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <LanguageToggle />
               <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
 
 
