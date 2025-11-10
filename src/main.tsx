@@ -14,6 +14,8 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 import "./index.css";
 import NotFound from "./pages/NotFound.tsx";
 import "./types/global.d.ts";
+import "@/i18n/config";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 function RouteSyncer() {
   const location = useLocation();
@@ -42,21 +44,23 @@ function RouteSyncer() {
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <VlyToolbar />
-    <InstrumentationProvider>
-      <BrowserRouter>
-        <RouteSyncer />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/catalogs" element={<Catalogs />} />
-          <Route path="/brands/samie" element={<Samie />} />
-          <Route path="/brands/powerman" element={<Powerman />} />
-          <Route path="/brands/samee" element={<Samee />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-      <Toaster />
-    </InstrumentationProvider>
+    <LanguageProvider>
+      <InstrumentationProvider>
+        <BrowserRouter>
+          <RouteSyncer />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/catalogs" element={<Catalogs />} />
+            <Route path="/brands/samie" element={<Samie />} />
+            <Route path="/brands/powerman" element={<Powerman />} />
+            <Route path="/brands/samee" element={<Samee />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+        <Toaster />
+      </InstrumentationProvider>
+    </LanguageProvider>
   </StrictMode>,
 );

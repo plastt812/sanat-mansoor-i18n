@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router";
+import { useTranslation } from "react-i18next";
+import { LanguageToggle } from "@/components/LanguageToggle";
 import { 
   Factory, 
   Shield, 
@@ -23,6 +25,7 @@ import {
 
 export default function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const features = [
     {
@@ -102,9 +105,10 @@ export default function Home() {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
+              <LanguageToggle />
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  Brands
+                  {t('nav.brands')}
                   <ChevronDown className="h-4 w-4" />
                 </span>
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
