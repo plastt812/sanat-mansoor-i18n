@@ -182,7 +182,7 @@ export default function Samee() {
               <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
                 {t('samee.categoriesTitle')}
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
+              <p className="text-xl text-muted-foreground leading-relaxed border-s-4 border-primary ps-6">
                 {t('samee.categoriesDesc')}
               </p>
             </motion.div>
