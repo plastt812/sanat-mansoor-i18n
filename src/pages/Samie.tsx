@@ -193,7 +193,7 @@ export default function Samie() {
               <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
                 {t('samie.capabilitiesTitle')}
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
+              <p className="text-xl text-muted-foreground leading-relaxed border-s-4 border-primary ps-6">
                 {t('samie.capabilitiesDesc')}
               </p>
             </motion.div>
