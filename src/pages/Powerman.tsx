@@ -13,71 +13,71 @@ export default function Powerman() {
 
   const collections = [
     {
-      title: "Industrial Tools",
-      description: "Designed for maximum strength and durability. Pullers, Punchers, and Pex are the most commonly used.",
+      titleKey: "powerman.collection1Title",
+      descKey: "powerman.collection1Desc",
       icon: Wrench
     },
     {
-      title: "Connection Technology",
-      description: "Dedicated tools for a wide range of operations used in connection technology. The most common applications are Crimping, Cutting, and Punching.",
+      titleKey: "powerman.collection2Title",
+      descKey: "powerman.collection2Desc",
       icon: Zap
     },
     {
-      title: "Bolting Tools",
-      description: "Hydraulic nut splitters, and a variety of mechanical and hydraulic spreading tools.",
+      titleKey: "powerman.collection3Title",
+      descKey: "powerman.collection3Desc",
       icon: Settings
     }
   ];
 
   const features = [
     {
-      title: "High-Power Hydraulic Solutions",
-      description: "700-1,500 bar pressure for precise force application in demanding environments."
+      titleKey: "powerman.feature1Title",
+      descKey: "powerman.feature1Desc"
     },
     {
-      title: "Lightweight & Portable",
-      description: "Corrosion-resistant coatings with heavy-duty spring returns and safety valves."
+      titleKey: "powerman.feature2Title",
+      descKey: "powerman.feature2Desc"
     },
     {
-      title: "Push-Pull Versatility",
-      description: "Cylinders offer flexible operation for various industrial applications."
+      titleKey: "powerman.feature3Title",
+      descKey: "powerman.feature3Desc"
     },
     {
-      title: "Two-Speed Operation",
-      description: "Pumps include efficient two-speed systems for optimal performance."
+      titleKey: "powerman.feature4Title",
+      descKey: "powerman.feature4Desc"
     },
     {
-      title: "Leak-Free Connections",
-      description: "Quick couplers and accessories ensure secure, reliable connections."
+      titleKey: "powerman.feature5Title",
+      descKey: "powerman.feature5Desc"
     },
     {
-      title: "High Capacity Range",
-      description: "Support for capacities up to 500 tons with various stroke options."
+      titleKey: "powerman.feature6Title",
+      descKey: "powerman.feature6Desc"
     },
     {
-      title: "Reduced Maintenance",
-      description: "Enhanced operational uptime with minimal maintenance requirements."
+      titleKey: "powerman.feature7Title",
+      descKey: "powerman.feature7Desc"
     },
     {
-      title: "Energy Savings",
-      description: "Efficient designs reduce energy consumption and operational costs."
+      titleKey: "powerman.feature8Title",
+      descKey: "powerman.feature8Desc"
     }
   ];
 
   const applications = [
     {
-      industry: "Oil & Gas",
-      description: "Explosion-proof air pumps for refineries, ensuring safety in hazardous environments.",
+      industryKey: "powerman.app1Industry",
+      descKey: "powerman.app1Desc",
       icon: Droplet
     },
     {
-      industry: "Mining",
-      description: "Portable gasoline pumps for remote sites, delivering reliable power where needed.",
+      industryKey: "powerman.app2Industry",
+      descKey: "powerman.app2Desc",
       icon: Mountain
     },
     {
-      industry: "Construction",
-      description: "Nut splitters for quick maintenance, reducing downtime and improving efficiency.",
+      industryKey: "powerman.app3Industry",
+      descKey: "powerman.app3Desc",
       icon: Factory
     }
   ];
@@ -98,34 +98,34 @@ export default function Powerman() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <LanguageToggle />
-              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.home')}</a>
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  Brands
+                  {t('nav.brands')}
                   <ChevronDown className="h-4 w-4" />
                 </span>
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMIE</div>
-                      <div className="text-xs text-muted-foreground">Heavy Industrial Equipment</div>
+                      <div className="font-semibold">{t('nav.samie')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.samieDesc')}</div>
                     </a>
                     <a href="/brands/powerman" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">POWERMAN</div>
-                      <div className="text-xs text-muted-foreground">High-Pressure Hydraulic Tools</div>
+                      <div className="font-semibold">{t('nav.powerman')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.powermanDesc')}</div>
                     </a>
                     <a href="/brands/samee" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMEE</div>
-                      <div className="text-xs text-muted-foreground">Electrical Equipment</div>
+                      <div className="font-semibold">{t('nav.samee')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.sameeDesc')}</div>
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
-              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
-              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">Catalogs</a>
+              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a>
+              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalogs')}</a>
               <Button onClick={() => navigate("/contact")} className="ml-4">
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </div>
           </div>
@@ -204,7 +204,7 @@ export default function Powerman() {
               const Icon = collection.icon;
               return (
                 <motion.div
-                  key={collection.title}
+                  key={collection.titleKey}
                   initial={{ x: -30, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: false, amount: 0.3 }}
@@ -221,11 +221,11 @@ export default function Powerman() {
                           <Icon className="h-6 w-6 text-primary" />
                         </div>
                         <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                          {collection.title}
+                          {t(collection.titleKey)}
                         </h3>
                       </div>
                       <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
-                        {collection.description}
+                        {t(collection.descKey)}
                       </p>
                     </div>
                   </div>
@@ -256,7 +256,7 @@ export default function Powerman() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={feature.titleKey}
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
@@ -268,8 +268,8 @@ export default function Powerman() {
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-primary mt-1 shrink-0" />
                       <div>
-                        <h3 className="font-bold mb-2">{feature.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                        <h3 className="font-bold mb-2">{t(feature.titleKey)}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{t(feature.descKey)}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -316,7 +316,7 @@ export default function Powerman() {
               const Icon = app.icon;
               return (
                 <motion.div
-                  key={app.industry}
+                  key={app.industryKey}
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: false, amount: 0.25 }}
@@ -331,8 +331,8 @@ export default function Powerman() {
                       </div>
                       <div className="h-2 flex-1 bg-gradient-to-r from-primary to-primary/40 rounded-full" />
                     </div>
-                    <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{app.industry}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{app.description}</p>
+                    <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{t(app.industryKey)}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t(app.descKey)}</p>
                   </div>
                 </motion.div>
               );
@@ -385,60 +385,59 @@ export default function Powerman() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Engineering durable, high‑performance industrial solutions across heavy equipment,
-                hydraulics, and electrical systems—trusted since 1948.
+                {t('footer.description')}
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t('nav.home')}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t('nav.about')}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t('nav.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t('nav.catalogs')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t('footer.ourBrands')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    {t('footer.samieLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    {t('footer.powermanLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    {t('footer.sameeLink')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -464,16 +463,16 @@ export default function Powerman() {
           <div className="my-10 h-px bg-border" />
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t('footer.copyright')}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t('footer.company')}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t('footer.support')}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t('nav.catalogs')}
               </a>
             </div>
           </div>
