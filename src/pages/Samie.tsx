@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Samie() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const capabilities = [
     {
@@ -165,12 +166,12 @@ export default function Samie() {
             alt="SAMIE logo"
             className="h-24 w-auto mb-8 mx-auto object-contain drop-shadow-2xl"
           />
-          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">Industrial Projects</Badge>
+          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">{t('samie.badge')}</Badge>
           <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
-            Machine Design & Fabrication
+            {t('samie.heroTitle')}
           </h1>
           <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Over 50 years of engineering excellence in complex machinery and equipment for the world's most demanding industries
+            {t('samie.heroSubtitle')}
           </p>
         </motion.div>
       </section>
@@ -187,13 +188,13 @@ export default function Samie() {
               viewport={{ once: false, amount: 0.25 }}
             >
               <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
-                Our Capabilities
+                {t('samie.capabilitiesLabel')}
               </div>
               <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                Engineering Excellence for Every Industry
+                {t('samie.capabilitiesTitle')}
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
-                From cutting-edge design to collaborative innovation and hydraulic mastery, we deliver robust solutions that stand the test of time.
+                {t('samie.capabilitiesDesc')}
               </p>
             </motion.div>
 
@@ -259,10 +260,10 @@ export default function Samie() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Our Flagship Solutions
+              {t('samie.solutionsTitle')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven industrial equipment and machinery designed for maximum performance and reliability
+              {t('samie.solutionsDesc')}
             </p>
           </motion.div>
 
@@ -326,14 +327,14 @@ export default function Samie() {
           className="relative z-10 max-w-4xl mx-auto px-8 text-center"
         >
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-            Ready to Discuss Your Project?
+            {t('samie.ctaTitle')}
           </h2>
           <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-            Contact our SAMIE team to explore custom machinery solutions tailored to your industrial needs
+            {t('samie.ctaDesc')}
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-10 py-7 rounded-full shadow-lg">
-              Get in Touch
+              {t('samie.ctaButton')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>

@@ -196,7 +196,7 @@ export default function Catalogs() {
           <div className="text-center mt-10">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block">
               <Button variant="outline" onClick={() => navigate("/contact")}>
-                Need a specific catalog? Contact our team
+                {t('catalogs.contactPrompt', 'Need a specific catalog? Contact our team')}
               </Button>
             </motion.div>
           </div>

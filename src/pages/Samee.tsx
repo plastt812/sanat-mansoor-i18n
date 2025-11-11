@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Samee() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const productCategories = [
     {
@@ -154,12 +155,12 @@ export default function Samee() {
             alt="SAMEE logo"
             className="h-24 w-auto mb-8 mx-auto object-contain drop-shadow-2xl"
           />
-          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">Industrial Electrical Equipment</Badge>
+          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">{t('samee.badge')}</Badge>
           <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
-            Outlets & Plugs, Cable Trolleys,<br />Alarm Sirens
+            {t('samee.heroTitle')}
           </h1>
           <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            SAMEE combines the widest selection of industrial sockets and plugs, sirens, and cable festoon systems with reliability, durability, and built-in safety.
+            {t('samee.heroSubtitle')}
           </p>
         </motion.div>
       </section>
@@ -176,13 +177,13 @@ export default function Samee() {
               viewport={{ once: false, amount: 0.25 }}
             >
               <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
-                Product Categories
+                {t('samee.categoriesLabel')}
               </div>
               <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                Comprehensive Electrical Solutions
+                {t('samee.categoriesTitle')}
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
-                Designed to make it easy to find the right equipment for any application, from sockets and plugs to cable festoon systems.
+                {t('samee.categoriesDesc')}
               </p>
             </motion.div>
 
@@ -248,10 +249,10 @@ export default function Samee() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Key Features and Applications
+              {t('samee.featuresTitle')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Robust electrical solutions with IP-rated protection, corrosion resistance, and easy installation for high-load environments.
+              {t('samee.featuresDesc')}
             </p>
           </motion.div>
 
@@ -292,10 +293,10 @@ export default function Samee() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Industry Applications
+              {t('samee.applicationsTitle')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ensuring safety and operational uptime in challenging industrial conditions across multiple sectors
+              {t('samee.applicationsDesc')}
             </p>
           </motion.div>
 
@@ -353,14 +354,14 @@ export default function Samee() {
           className="relative z-10 max-w-4xl mx-auto px-8 text-center"
         >
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-            Need Industrial Electrical Solutions?
+            {t('samee.ctaTitle')}
           </h2>
           <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-            Contact our SAMEE team to explore electrical equipment and systems for your industrial facility
+            {t('samee.ctaDesc')}
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-10 py-7 rounded-full shadow-lg">
-              Get in Touch
+              {t('samee.ctaButton')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>

@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Powerman() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const collections = [
     {
@@ -151,12 +152,12 @@ export default function Powerman() {
             alt="POWERMAN logo"
             className="h-24 w-auto mb-8 mx-auto object-contain drop-shadow-2xl"
           />
-          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">Industrial Hydraulic Equipment</Badge>
+          <Badge variant="secondary" className="mb-6 text-base px-6 py-2">{t('powerman.badge')}</Badge>
           <h1 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text">
-            Cylinders, Pumps & Tools
+            {t('powerman.heroTitle')}
           </h1>
           <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Reliable, Durable, and Safe High-Pressure Hydraulic Equipment for any application requiring applied force
+            {t('powerman.heroSubtitle')}
           </p>
         </motion.div>
       </section>
@@ -173,13 +174,13 @@ export default function Powerman() {
               viewport={{ once: false, amount: 0.25 }}
             >
               <div className="inline-block mb-4 px-4 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
-                Tool Collections
+                {t('powerman.collectionsLabel')}
               </div>
               <h2 className="text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                Powerman Tool Collections
+                {t('powerman.collectionsTitle')}
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-primary pl-6">
-                An extensive range of tools to ensure that even your most demanding application can be undertaken with the highest degree of safety and accuracy.
+                {t('powerman.collectionsDesc')}
               </p>
             </motion.div>
 
@@ -245,10 +246,10 @@ export default function Powerman() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold tracking-tight mb-4">
-              Key Features and Applications
+              {t('powerman.featuresTitle')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              High-power hydraulic solutions designed for precision, portability, and maximum operational uptime.
+              {t('powerman.featuresDesc')}
             </p>
           </motion.div>
 
@@ -289,10 +290,10 @@ export default function Powerman() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Industry Applications
+              {t('powerman.applicationsTitle')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Delivering energy savings and reduced downtime in hazardous environments across multiple industries
+              {t('powerman.applicationsDesc')}
             </p>
           </motion.div>
 
@@ -356,14 +357,14 @@ export default function Powerman() {
           className="relative z-10 max-w-4xl mx-auto px-8 text-center"
         >
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-            Need High-Pressure Hydraulic Solutions?
+            {t('powerman.ctaTitle')}
           </h2>
           <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-            Contact our POWERMAN team to explore hydraulic tools and equipment for your specific application
+            {t('powerman.ctaDesc')}
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button size="lg" onClick={() => navigate("/contact")} className="text-lg px-10 py-7 rounded-full shadow-lg">
-              Get in Touch
+              {t('powerman.ctaButton')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </motion.div>
