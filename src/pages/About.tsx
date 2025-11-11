@@ -29,10 +29,10 @@ export default function About() {
   const { t } = useTranslation();
 
   const values = [
-    { icon: BadgeCheck, title: "Quality First", desc: "Relentless focus on precision, repeatability, and reliability." },
-    { icon: Handshake, title: "Customer-Centric", desc: "Partnerships built on trust, transparency, and outcomes." },
-    { icon: Rocket, title: "Innovation", desc: "Modern processes and continuous improvement at every layer." },
-    { icon: Award, title: "Integrity", desc: "We do the right thing, especially when no one is watching." },
+    { icon: BadgeCheck, titleKey: "about.value1Title", descKey: "about.value1Desc" },
+    { icon: Handshake, titleKey: "about.value2Title", descKey: "about.value2Desc" },
+    { icon: Rocket, titleKey: "about.value3Title", descKey: "about.value3Desc" },
+    { icon: Award, titleKey: "about.value4Title", descKey: "about.value4Desc" },
   ];
 
   const milestones = [
@@ -59,13 +59,13 @@ export default function About() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <LanguageToggle />
-              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.home')}</a>
 
 
 
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  Brands
+                  {t('nav.brands')}
                   <ChevronDown className="h-4 w-4" />
                 </span>
 
@@ -74,25 +74,25 @@ export default function About() {
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMIE</div>
-                      <div className="text-xs text-muted-foreground">Heavy Industrial Equipment</div>
+                      <div className="font-semibold">{t('nav.samie')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.samieDesc')}</div>
                     </a>
                     <a href="/brands/powerman" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">POWERMAN</div>
-                      <div className="text-xs text-muted-foreground">High-Pressure Hydraulic Tools</div>
+                      <div className="font-semibold">{t('nav.powerman')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.powermanDesc')}</div>
                     </a>
                     <a href="/brands/samee" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMEE</div>
-                      <div className="text-xs text-muted-foreground">Electrical Equipment</div>
+                      <div className="font-semibold">{t('nav.samee')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.sameeDesc')}</div>
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/about" className="text-foreground font-medium">About Us</a>
-              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
-              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">Catalogs</a>
+              <a href="/about" className="text-foreground font-medium">{t('nav.about')}</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a>
+              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalogs')}</a>
               <Button onClick={() => navigate("/contact")} className="ml-2">
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </div>
           </div>
@@ -114,13 +114,12 @@ export default function About() {
             transition={{ type: "spring", stiffness: 220, damping: 22 }}
             className="relative z-10 px-6 text-center max-w-3xl"
           >
-            <Badge variant="secondary" className="mb-4">About Us</Badge>
+            <Badge variant="secondary" className="mb-4">{t('nav.about')}</Badge>
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-              Engineering Excellence Since 1948
+              {t('about.heroTitle')}
             </h1>
             <p className="text-lg text-muted-foreground">
-              We design, build, and deliver industrial solutions with a legacy of precision,
-              innovation, and trusted partnerships.
+              {t('about.heroDesc')}
             </p>
           </motion.div>
         </div>
@@ -138,21 +137,21 @@ export default function About() {
             className="lg:col-span-7"
           >
             <div className="max-w-2xl flex flex-col gap-4">
-              <Badge variant="secondary" className="mb-1">Who We Are</Badge>
+              <Badge variant="secondary" className="mb-1">{t('about.whoWeAreBadge')}</Badge>
               <h2 className="text-3xl font-bold tracking-tight">
-                A family-built industrial partner since 1948
+                {t('about.whoWeAreTitle')}
               </h2>
               <p className="text-base text-muted-foreground">
-                Precision manufacturing, integrated engineering, and long-term partnerships across the world's most demanding industries.
+                {t('about.whoWeAreSubtitle')}
               </p>
 
               {/* Editorial rail */}
               <div className="mt-6 border-l pl-6 space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Sanat Mansoor is a family-owned industrial company with a history dating back to 1948. From our early beginnings as a small engineering workshop, we have grown into a trusted partner for some of the most demanding industries in the world. Over the decades, we have successfully delivered more than 1,000 projects, building a reputation for reliability, precision, and innovation.
+                  {t('about.whoWeArePara1')}
                 </p>
                 <p>
-                  For over 50 years, we have worked alongside leaders in steel production, oil &amp; gas, mining, power generation, and construction. Each project has reinforced our commitment to engineering excellence and long-term partnerships. Today, Sanat Mansoor continues to combine tradition with innovation — delivering solutions that stand the test of time.
+                  {t('about.whoWeArePara2')}
                 </p>
               </div>
             </div>
@@ -170,7 +169,7 @@ export default function About() {
             <div className="flex flex-col gap-4 h-full">
               <div className="flex items-center justify-between">
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Key Metrics
+                  {t('about.keyMetrics')}
                 </h3>
               </div>
 
@@ -186,9 +185,9 @@ export default function About() {
                   <div className="inline-flex items-center justify-center rounded-full bg-primary/10 p-3 mb-2">
                     <Calendar className="h-8 w-8 text-primary" />
                   </div>
-                  <div className="text-sm font-semibold leading-tight">Since</div>
+                  <div className="text-sm font-semibold leading-tight">{t('about.since')}</div>
                   <div className="text-2xl font-bold tracking-tight">1948</div>
-                  <div className="text-xs text-muted-foreground mt-1">Heritage of excellence</div>
+                  <div className="text-xs text-muted-foreground mt-1">{t('about.heritageExcellence')}</div>
                 </motion.div>
 
                 {/* Team */}
@@ -201,9 +200,9 @@ export default function About() {
                   <div className="inline-flex items-center justify-center rounded-full bg-primary/10 p-3 mb-2">
                     <Users className="h-8 w-8 text-primary" />
                   </div>
-                  <div className="text-sm font-semibold leading-tight">Team</div>
-                  <div className="text-2xl font-bold tracking-tight">200+ experts</div>
-                  <div className="text-xs text-muted-foreground mt-1">Integrated engineering</div>
+                  <div className="text-sm font-semibold leading-tight">{t('about.team')}</div>
+                  <div className="text-2xl font-bold tracking-tight">{t('about.teamCount')}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{t('about.integratedEng')}</div>
                 </motion.div>
 
                 {/* On‑Time Delivery */}
@@ -216,9 +215,9 @@ export default function About() {
                   <div className="inline-flex items-center justify-center rounded-full bg-primary/10 p-3 mb-2">
                     <Clock className="h-8 w-8 text-primary" />
                   </div>
-                  <div className="text-sm font-semibold leading-tight">On‑Time Delivery</div>
+                  <div className="text-sm font-semibold leading-tight">{t('about.onTimeDelivery')}</div>
                   <div className="text-2xl font-bold tracking-tight">98.7%</div>
-                  <div className="text-xs text-muted-foreground mt-1">Reliability you can plan on</div>
+                  <div className="text-xs text-muted-foreground mt-1">{t('about.reliability')}</div>
                 </motion.div>
 
                 {/* Projects */}
@@ -231,9 +230,9 @@ export default function About() {
                   <div className="inline-flex items-center justify-center rounded-full bg-primary/10 p-3 mb-2">
                     <Award className="h-8 w-8 text-primary" />
                   </div>
-                  <div className="text-sm font-semibold leading-tight">Projects</div>
+                  <div className="text-sm font-semibold leading-tight">{t('about.projects')}</div>
                   <div className="text-2xl font-bold tracking-tight">1000+</div>
-                  <div className="text-xs text-muted-foreground mt-1">Proven outcomes</div>
+                  <div className="text-xs text-muted-foreground mt-1">{t('about.provenOutcomes')}</div>
                 </motion.div>
               </div>
             </div>
@@ -268,18 +267,18 @@ export default function About() {
             transition={{ type: "spring", stiffness: 220, damping: 22, delay: 0.06 }}
             className="lg:col-span-7"
           >
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Our Legacy</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">{t('about.legacyTitle')}</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              For over 50 years, we have worked alongside leaders in steel production, oil &amp; gas, mining, power generation, and construction. Each project has reinforced our commitment to engineering excellence and long-term partnerships. Today, Sanat Mansoor continues to combine tradition with innovation — delivering solutions that stand the test of time.
+              {t('about.legacyDesc')}
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border">
                 <Gauge className="h-5 w-5 text-primary" />
-                <span className="text-sm">Since 1948 · 1,000+ projects</span>
+                <span className="text-sm">{t('about.legacyPill1')}</span>
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border">
                 <Cog className="h-5 w-5 text-primary" />
-                <span className="text-sm">Integrated engineering and manufacturing</span>
+                <span className="text-sm">{t('about.legacyPill2')}</span>
               </div>
             </div>
           </motion.div>
@@ -296,10 +295,9 @@ export default function About() {
             transition={{ type: "spring", stiffness: 220, damping: 22 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold tracking-tight mb-3">Featured Projects</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-3">{t('about.featuredProjectsTitle')}</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              A snapshot of recent, high‑impact engagements across steel, energy, and mining—delivered with
-              precision and measurable results.
+              {t('about.featuredProjectsDesc')}
             </p>
           </motion.div>
 
@@ -314,14 +312,14 @@ export default function About() {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Wrench className="h-6 w-6 text-primary" />
-                    <h3 className="font-semibold">Steel Mill Retrofit</h3>
+                    <h3 className="font-semibold">{t('about.project1Title')}</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    HPGR integration and bearing redesign to increase throughput and reduce downtime.
+                    {t('about.project1Desc')}
                   </p>
                   <ul className="mt-4 space-y-2 text-sm">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> +12% line capacity</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> 18% maintenance reduction</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> {t('about.project1Item1')}</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> {t('about.project1Item2')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -337,14 +335,14 @@ export default function About() {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Plug className="h-6 w-6 text-primary" />
-                    <h3 className="font-semibold">Offshore Hydraulic Overhaul</h3>
+                    <h3 className="font-semibold">{t('about.project2Title')}</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    High‑pressure systems upgrade with redundancy and safety interlocks.
+                    {t('about.project2Desc')}
                   </p>
                   <ul className="mt-4 space-y-2 text-sm">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> 700 bar certified</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> Zero unplanned shutdowns</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> {t('about.project2Item1')}</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> {t('about.project2Item2')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -360,14 +358,14 @@ export default function About() {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <Gauge className="h-6 w-6 text-primary" />
-                    <h3 className="font-semibold">Power Plant Alignment</h3>
+                    <h3 className="font-semibold">{t('about.project3Title')}</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Precision alignment and vibration mitigation for turbine assemblies.
+                    {t('about.project3Desc')}
                   </p>
                   <ul className="mt-4 space-y-2 text-sm">
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> 99.9% uptime</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> ISO 9001 compliant</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> {t('about.project3Item1')}</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="h-4 w-4 text-primary mt-0.5" /> {t('about.project3Item2')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -387,28 +385,27 @@ export default function About() {
               transition={{ type: "spring", stiffness: 220, damping: 22 }}
               className="lg:col-span-6"
             >
-              <h2 className="text-3xl font-bold tracking-tight mb-4">Industries We Serve</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-4">{t('about.industriesTitle')}</h2>
               <p className="text-muted-foreground mb-8">
-                Our products and services are trusted where performance is critical. From heavy industry to energy,
-                we deliver systems engineered to endure.
+                {t('about.industriesDesc')}
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <span className="px-6 py-3 rounded-full border bg-background/90 shadow-sm inline-flex items-center justify-center gap-3">
                   <span className="text-2xl">🏭</span>
-                  <span className="text-lg font-semibold">Steel Production</span>
+                  <span className="text-lg font-semibold">{t('home.steelProduction')}</span>
                 </span>
                 <span className="px-6 py-3 rounded-full border bg-background/90 shadow-sm inline-flex items-center justify-center gap-3">
                   <span className="text-2xl">⛏️</span>
-                  <span className="text-lg font-semibold">Mining</span>
+                  <span className="text-lg font-semibold">{t('home.mining')}</span>
                 </span>
                 <span className="px-6 py-3 rounded-full border bg-background/90 shadow-sm inline-flex items-center justify-center gap-3">
                   <span className="text-2xl">🛢️</span>
-                  <span className="text-lg font-semibold">Oil &amp; Gas</span>
+                  <span className="text-lg font-semibold">{t('home.oilGas')}</span>
                 </span>
                 <span className="px-6 py-3 rounded-full border bg-background/90 shadow-sm inline-flex items-center justify-center gap-3">
                   <span className="text-2xl">🔋</span>
-                  <span className="text-lg font-semibold">Power Generation</span>
+                  <span className="text-lg font-semibold">{t('home.powerGeneration')}</span>
                 </span>
               </div>
             </motion.div>
@@ -436,11 +433,11 @@ export default function About() {
       {/* Our Core Values */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-3xl font-bold tracking-tight mb-10 text-center">Our Core Values</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-10 text-center">{t('about.coreValuesTitle')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <motion.div
-                key={v.title}
+                key={v.titleKey}
                 initial={{ y: 16, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
@@ -453,8 +450,8 @@ export default function About() {
                     <div className="inline-flex items-center justify-center rounded-full bg-primary/10 p-3 mb-4">
                       <v.icon className="h-10 w-10 text-primary" />
                     </div>
-                    <h3 className="text-lg font-semibold mb-2">{v.title}</h3>
-                    <p className="text-sm text-muted-foreground">{v.desc}</p>
+                    <h3 className="text-lg font-semibold mb-2">{t(v.titleKey)}</h3>
+                    <p className="text-sm text-muted-foreground">{t(v.descKey)}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -474,11 +471,9 @@ export default function About() {
         <div className="absolute inset-0 bg-background/40" />
         <div className="relative z-10 max-w-5xl mx-auto px-8">
           <div className="p-10 text-center">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Our Vision for the Future</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">{t('about.visionTitle')}</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              As we look ahead, our mission remains clear: to provide innovative, reliable, and sustainable
-              solutions that empower industries worldwide. We are committed to continuous improvement,
-              investing in advanced technologies, and building partnerships that last.
+              {t('about.visionDesc')}
             </p>
           </div>
         </div>
@@ -499,33 +494,32 @@ export default function About() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Engineering durable, high‑performance industrial solutions across heavy equipment,
-                hydraulics, and electrical systems—trusted since 1948.
+                {t('footer.description')}
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t('nav.home')}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t('nav.about')}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t('nav.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t('nav.catalogs')}
                   </a>
                 </li>
               </ul>
@@ -533,21 +527,21 @@ export default function About() {
 
             {/* Our Brands */}
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t('footer.ourBrands')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    {t('footer.samieLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    {t('footer.powermanLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    {t('footer.sameeLink')}
                   </a>
                 </li>
               </ul>
@@ -555,7 +549,7 @@ export default function About() {
 
             {/* Contact */}
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -583,16 +577,16 @@ export default function About() {
 
           {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t('footer.copyright')}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t('footer.company')}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t('footer.support')}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t('nav.catalogs')}
               </a>
             </div>
           </div>
