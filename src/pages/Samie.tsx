@@ -12,86 +12,86 @@ export default function Samie() {
 
   const capabilities = [
     {
-      title: "Engineered for Excellence",
-      description: "Our team of highly qualified engineers leverages cutting-edge design principles and advanced software to create robust and efficient solutions that operate flawlessly under rigorous conditions.",
+      titleKey: "samie.cap1Title",
+      descKey: "samie.cap1Desc",
       icon: Cog
     },
     {
-      title: "Collaborative Engineering and Manufacturing",
-      description: "Through strategic partnerships, like the Esfarayen Industrial Complex Special Consortium, we foster innovation in public-private collaborations for cutting-edge machinery.",
+      titleKey: "samie.cap2Title",
+      descKey: "samie.cap2Desc",
       icon: Settings
     },
     {
-      title: "Hydraulic Engineering and Manufacturing",
-      description: "We design and manufacture hydraulic circuits, custom cylinders, and components for key industries. Our POWERMAN brand offers high-pressure (700 and 1,500 bar) tools and equipment.",
+      titleKey: "samie.cap3Title",
+      descKey: "samie.cap3Desc",
       icon: Droplet
     },
     {
-      title: "Mechanical Structure Design and Manufacturing",
-      description: "We create solid frameworks, precise actuation systems, and lightweight yet durable structures to withstand demanding conditions.",
+      titleKey: "samie.cap4Title",
+      descKey: "samie.cap4Desc",
       icon: Wrench
     },
     {
-      title: "Precision and Large Piece Machining",
-      description: "Using state-of-the-art CNC centers, we achieve exceptional accuracy in components of all sizes, reducing wear and extending lifespan.",
+      titleKey: "samie.cap5Title",
+      descKey: "samie.cap5Desc",
       icon: Zap
     },
     {
-      title: "Advanced Casting",
-      description: "Via our Felez Taban subsidiary, we produce high-performance alloy components for mining, built to withstand extreme wear.",
+      titleKey: "samie.cap6Title",
+      descKey: "samie.cap6Desc",
       icon: Mountain
     },
     {
-      title: "Advanced Welding Expertise",
-      description: "Our certified technicians use cutting-edge techniques to ensure structural integrity, minimizing distortion and maximizing strength.",
+      titleKey: "samie.cap7Title",
+      descKey: "samie.cap7Desc",
       icon: Factory
     }
   ];
 
   const solutions = [
     {
-      title: "Journal Bearings & Chocks",
-      description: "Over 700 backup chocks and 1,100+ bearings and bushings for Mobarakeh Steel Company, providing low-friction support for rotating shafts.",
+      titleKey: "samie.sol1Title",
+      descKey: "samie.sol1Desc",
       icon: CircleDot
     },
     {
-      title: "Liner Handler Machines",
-      description: "Re-engineered models (1,000-5,000 kg lifting capacity) for streamlined liner replacement in industrial applications.",
+      titleKey: "samie.sol2Title",
+      descKey: "samie.sol2Desc",
       icon: Wrench
     },
     {
-      title: "Oil & Gas Equipment",
-      description: "Production of complex spare parts and equipment used in the Oil & Gas industry, Steel, Cement, and Compost companies, as well as Power Plants.",
+      titleKey: "samie.sol3Title",
+      descKey: "samie.sol3Desc",
       icon: Droplet
     },
     {
-      title: "Bearings, Chocks, and Bushes",
-      description: "Manufacturing & repairment of various Bearings, Chocks, and Bushes in different sizes.",
+      titleKey: "samie.sol4Title",
+      descKey: "samie.sol4Desc",
       icon: Cog
     },
     {
-      title: "Cone Crushers",
-      description: "Manufacturing of Cone Crushers for mining and industrial applications.",
+      titleKey: "samie.sol5Title",
+      descKey: "samie.sol5Desc",
       icon: Mountain
     },
     {
-      title: "Pickling and Recoiling Equipment",
-      description: "Manufacturing of Machines, Frames, and Rollers for Pickling and Recoiling Lines.",
+      titleKey: "samie.sol6Title",
+      descKey: "samie.sol6Desc",
       icon: Layers
     },
     {
-      title: "High Pressure Grinding Rolls (HPGR)",
-      description: "Over 80 enhanced units utilizing high pressure for efficient grinding, energy savings, and consistent output.",
+      titleKey: "samie.sol7Title",
+      descKey: "samie.sol7Desc",
       icon: Zap
     },
     {
-      title: "Special Duty Machines",
-      description: "Custom-designed to meet unique industrial requirements.",
+      titleKey: "samie.sol8Title",
+      descKey: "samie.sol8Desc",
       icon: Settings
     },
     {
-      title: "Custom Production Lines",
-      description: "Complete lines integrating with your infrastructure, like the reverse-engineered 2,500-ton rollers and equipment for Mobarakeh Steel's pickling and recoiling line.",
+      titleKey: "samie.sol9Title",
+      descKey: "samie.sol9Desc",
       icon: Factory
     }
   ];
@@ -112,34 +112,34 @@ export default function Samie() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <LanguageToggle />
-              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.home')}</a>
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  Brands
+                  {t('nav.brands')}
                   <ChevronDown className="h-4 w-4" />
                 </span>
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMIE</div>
-                      <div className="text-xs text-muted-foreground">Heavy Industrial Equipment</div>
+                      <div className="font-semibold">{t('nav.samie')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.samieDesc')}</div>
                     </a>
                     <a href="/brands/powerman" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">POWERMAN</div>
-                      <div className="text-xs text-muted-foreground">High-Pressure Hydraulic Tools</div>
+                      <div className="font-semibold">{t('nav.powerman')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.powermanDesc')}</div>
                     </a>
                     <a href="/brands/samee" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMEE</div>
-                      <div className="text-xs text-muted-foreground">Electrical Equipment</div>
+                      <div className="font-semibold">{t('nav.samee')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.sameeDesc')}</div>
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
-              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
-              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">Catalogs</a>
+              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a>
+              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalogs')}</a>
               <Button onClick={() => navigate("/contact")} className="ml-4">
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function Samie() {
               const Icon = cap.icon;
               return (
                 <motion.div
-                  key={cap.title}
+                  key={cap.titleKey}
                   initial={{ x: -30, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: false, amount: 0.3 }}
@@ -235,11 +235,11 @@ export default function Samie() {
                           <Icon className="h-6 w-6 text-primary" />
                         </div>
                         <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                          {cap.title}
+                          {t(cap.titleKey)}
                         </h3>
                       </div>
                       <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
-                        {cap.description}
+                        {t(cap.descKey)}
                       </p>
                     </div>
                   </div>
@@ -286,7 +286,7 @@ export default function Samie() {
               const Icon = solution.icon;
               return (
                 <motion.div
-                  key={solution.title}
+                  key={solution.titleKey}
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: false, amount: 0.25 }}
@@ -301,8 +301,8 @@ export default function Samie() {
                       </div>
                       <div className="h-2 flex-1 bg-gradient-to-r from-primary to-primary/40 rounded-full" />
                     </div>
-                    <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{solution.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+                    <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{t(solution.titleKey)}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{t(solution.descKey)}</p>
                   </div>
                 </motion.div>
               );
@@ -355,60 +355,59 @@ export default function Samie() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Engineering durable, high‑performance industrial solutions across heavy equipment,
-                hydraulics, and electrical systems—trusted since 1948.
+                {t('footer.description')}
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t('nav.home')}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t('nav.about')}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t('nav.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t('nav.catalogs')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t('footer.ourBrands')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    {t('footer.samieLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    {t('footer.powermanLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    {t('footer.sameeLink')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -434,16 +433,16 @@ export default function Samie() {
           <div className="my-10 h-px bg-border" />
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t('footer.copyright')}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t('footer.company')}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t('footer.support')}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t('nav.catalogs')}
               </a>
             </div>
           </div>
