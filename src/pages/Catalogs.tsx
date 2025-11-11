@@ -118,7 +118,7 @@ export default function Catalogs() {
           />
           <div className="absolute inset-0 bg-background/40" />
           <div className="relative z-10 px-6 text-center">
-            <Badge variant="secondary" className="mb-4">Library</Badge>
+            <Badge variant="secondary" className="mb-4">{t('catalogs.badge', 'Library')}</Badge>
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-4">
               {t('catalogs.title')}
             </h1>
@@ -178,13 +178,13 @@ export default function Catalogs() {
                     <div className="mt-auto flex gap-3">
                       <a href={c.href} target="_blank" rel="noopener noreferrer" className="w-full">
                         <Button className="w-full">
-                          View PDF
+                          {t('catalogs.view')}
                         </Button>
                       </a>
                       <a href={c.href} download className="w-full">
                         <Button variant="outline" className="w-full">
                           <Download className="h-4 w-4 mr-2" />
-                          Download
+                          {t('catalogs.download')}
                         </Button>
                       </a>
                     </div>
@@ -196,7 +196,7 @@ export default function Catalogs() {
           <div className="text-center mt-10">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block">
               <Button variant="outline" onClick={() => navigate("/contact")}>
-                {t('catalogs.contactPrompt', 'Need a specific catalog? Contact our team')}
+                {t('catalogs.contactPrompt')}
               </Button>
             </motion.div>
           </div>
@@ -218,33 +218,32 @@ export default function Catalogs() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Engineering durable, high‑performance industrial solutions across heavy equipment,
-                hydraulics, and electrical systems—trusted since 1948.
+                {t('footer.description')}
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t('nav.home')}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t('nav.about')}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t('nav.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t('nav.catalogs')}
                   </a>
                 </li>
               </ul>
@@ -252,21 +251,21 @@ export default function Catalogs() {
 
             {/* Our Brands */}
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t('footer.ourBrands')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    {t('footer.samieLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    {t('footer.powermanLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    {t('footer.sameeLink')}
                   </a>
                 </li>
               </ul>
@@ -274,7 +273,7 @@ export default function Catalogs() {
 
             {/* Contact */}
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -302,16 +301,16 @@ export default function Catalogs() {
 
           {/* Bottom bar */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t('footer.copyright')}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t('footer.company')}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t('footer.support')}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t('nav.catalogs')}
               </a>
             </div>
           </div>

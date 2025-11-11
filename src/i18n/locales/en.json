@@ -166,6 +166,7 @@
   "catalogs": {
     "title": "Product Catalogs",
     "subtitle": "Download our comprehensive product catalogs",
+    "badge": "Library",
     "samie": "SAMIE Catalog",
     "samieDesc": "Heavy Industrial Equipment and Machinery",
     "powerman": "POWERMAN Catalog",
@@ -173,7 +174,8 @@
     "samee": "SAMEE Catalog",
     "sameeDesc": "Electrical Equipment and Systems",
     "download": "Download",
-    "view": "View"
+    "view": "View",
+    "contactPrompt": "Need a specific catalog? Contact our team"
   },
   "samie": {
     "badge": "Industrial Projects",
