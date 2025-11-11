@@ -13,74 +13,74 @@ export default function Samee() {
 
   const productCategories = [
     {
-      title: "Sockets & Plugs",
-      description: "Over 200 different models available from 10A to 125A, designed for industrial environments.",
+      titleKey: "samee.category1Title",
+      descKey: "samee.category1Desc",
       icon: Plug
     },
     {
-      title: "Connectors",
-      description: "Reliable connection solutions for high-load applications with IP-rated protection.",
+      titleKey: "samee.category2Title",
+      descKey: "samee.category2Desc",
       icon: Cable
     },
     {
-      title: "Cable Festoon Systems",
-      description: "Wire ropes and C-rails, including custom-designed systems for flexible power distribution.",
+      titleKey: "samee.category3Title",
+      descKey: "samee.category3Desc",
       icon: Zap
     },
     {
-      title: "Alarm Sirens",
-      description: "Durable sirens for industrial alerts, ensuring safety in challenging conditions.",
+      titleKey: "samee.category4Title",
+      descKey: "samee.category4Desc",
       icon: Siren
     }
   ];
 
   const features = [
     {
-      title: "IP-Rated Protection",
-      description: "Dust and water resistance for reliable operation in harsh environments."
+      titleKey: "samee.feature1Title",
+      descKey: "samee.feature1Desc"
     },
     {
-      title: "Corrosion-Resistant Materials",
-      description: "Built to withstand challenging industrial conditions and extend product lifespan."
+      titleKey: "samee.feature2Title",
+      descKey: "samee.feature2Desc"
     },
     {
-      title: "Easy Installation",
-      description: "Designed for quick and straightforward installation in high-load environments."
+      titleKey: "samee.feature3Title",
+      descKey: "samee.feature3Desc"
     },
     {
-      title: "Panel-Mounted Solutions",
-      description: "Secure sockets and plugs for reliable electrical connections."
+      titleKey: "samee.feature4Title",
+      descKey: "samee.feature4Desc"
     },
     {
-      title: "Custom Cable Systems",
-      description: "Flexible power distribution solutions tailored to your specific requirements."
+      titleKey: "samee.feature5Title",
+      descKey: "samee.feature5Desc"
     },
     {
-      title: "High-Amperage Support",
-      description: "Appliances rated up to 125A for demanding industrial applications."
+      titleKey: "samee.feature6Title",
+      descKey: "samee.feature6Desc"
     },
     {
-      title: "Seamless Integration",
-      description: "Products designed to integrate smoothly into complex industrial setups."
+      titleKey: "samee.feature7Title",
+      descKey: "samee.feature7Desc"
     },
     {
-      title: "Adaptable Design",
-      description: "Solutions that adapt to specific site requirements and operational needs."
+      titleKey: "samee.feature8Title",
+      descKey: "samee.feature8Desc"
     }
   ];
 
   const applications = [
     {
-      industry: "Steel Production",
-      description: "Durable sirens for alerts and weatherproof electrical connections in demanding production environments."
+      industryKey: "samee.app1Industry",
+      descKey: "samee.app1Desc"
     },
     {
-      industry: "Mining",
-      description: "Weatherproof connectors for underground use, ensuring reliable power in harsh conditions."
+      industryKey: "samee.app2Industry",
+      descKey: "samee.app2Desc"
     },
     {
-      industry: "Power Generation",
-      description: "Trolley systems for overhead lines, ensuring safety and operational uptime in power plants."
+      industryKey: "samee.app3Industry",
+      descKey: "samee.app3Desc"
     }
   ];
 
@@ -101,34 +101,34 @@ export default function Samee() {
             
             <div className="hidden md:flex items-center space-x-8">
               <LanguageToggle />
-              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.home')}</a>
               <div className="relative group">
                 <span className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                  Brands
+                  {t('nav.brands')}
                   <ChevronDown className="h-4 w-4" />
                 </span>
                 <div className="absolute left-0 top-full mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <a href="/brands/samie" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMIE</div>
-                      <div className="text-xs text-muted-foreground">Heavy Industrial Equipment</div>
+                      <div className="font-semibold">{t('nav.samie')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.samieDesc')}</div>
                     </a>
                     <a href="/brands/powerman" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">POWERMAN</div>
-                      <div className="text-xs text-muted-foreground">High-Pressure Hydraulic Tools</div>
+                      <div className="font-semibold">{t('nav.powerman')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.powermanDesc')}</div>
                     </a>
                     <a href="/brands/samee" className="block px-4 py-3 text-sm hover:bg-muted transition-colors">
-                      <div className="font-semibold">SAMEE</div>
-                      <div className="text-xs text-muted-foreground">Electrical Equipment</div>
+                      <div className="font-semibold">{t('nav.samee')}</div>
+                      <div className="text-xs text-muted-foreground">{t('nav.sameeDesc')}</div>
                     </a>
                   </div>
                 </div>
               </div>
-              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a>
-              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
-              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">Catalogs</a>
+              <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.about')}</a>
+              <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.contact')}</a>
+              <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">{t('nav.catalogs')}</a>
               <Button onClick={() => navigate("/contact")} className="ml-4">
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function Samee() {
               const Icon = category.icon;
               return (
                 <motion.div
-                  key={category.title}
+                  key={category.titleKey}
                   initial={{ x: -30, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: false, amount: 0.3 }}
@@ -224,11 +224,11 @@ export default function Samee() {
                           <Icon className="h-6 w-6 text-primary" />
                         </div>
                         <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                          {category.title}
+                          {t(category.titleKey)}
                         </h3>
                       </div>
                       <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
-                        {category.description}
+                        {t(category.descKey)}
                       </p>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ export default function Samee() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={feature.titleKey}
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
@@ -271,8 +271,8 @@ export default function Samee() {
                     <div className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-primary mt-1 shrink-0" />
                       <div>
-                        <h3 className="font-bold mb-2">{feature.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                        <h3 className="font-bold mb-2">{t(feature.titleKey)}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{t(feature.descKey)}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -317,7 +317,7 @@ export default function Samee() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {applications.map((app, index) => (
               <motion.div
-                key={app.industry}
+                  key={app.industryKey}
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: false, amount: 0.25 }}
@@ -329,8 +329,8 @@ export default function Samee() {
                   <div className="mb-6">
                     <div className="h-2 w-20 bg-gradient-to-r from-primary to-primary/40 rounded-full" />
                   </div>
-                  <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{app.industry}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{app.description}</p>
+                  <h3 className="font-bold text-xl mb-4 group-hover:text-primary transition-colors">{t(app.industryKey)}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{t(app.descKey)}</p>
                 </div>
               </motion.div>
             ))}
@@ -382,60 +382,59 @@ export default function Samee() {
                 <span className="text-xl font-bold tracking-tight">Sanat Mansoor</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Engineering durable, high‑performance industrial solutions across heavy equipment,
-                hydraulics, and electrical systems—trusted since 1948.
+                {t('footer.description')}
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Quick Links</h4>
+              <h4 className="font-semibold mb-3">{t('footer.quickLinks')}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Home
+                    {t('nav.home')}
                   </a>
                 </li>
                 <li>
                   <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                    About Us
+                    {t('nav.about')}
                   </a>
                 </li>
                 <li>
                   <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact Us
+                    {t('nav.contact')}
                   </a>
                 </li>
                 <li>
                   <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Catalogs
+                    {t('nav.catalogs')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Our Brands</h4>
+              <h4 className="font-semibold mb-3">{t('footer.ourBrands')}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
                   <a href="/brands/samie" className="hover:text-foreground transition-colors">
-                    SAMIE — Heavy Industrial Equipment
+                    {t('footer.samieLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/powerman" className="hover:text-foreground transition-colors">
-                    POWERMAN — High‑Pressure Hydraulic Tools
+                    {t('footer.powermanLink')}
                   </a>
                 </li>
                 <li>
                   <a href="/brands/samee" className="hover:text-foreground transition-colors">
-                    SAMEE — Electrical Equipment
+                    {t('footer.sameeLink')}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
+              <h4 className="font-semibold mb-3">{t('footer.contact')}</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
@@ -461,16 +460,16 @@ export default function Samee() {
           <div className="my-10 h-px bg-border" />
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6">
-            <p className="text-sm text-muted-foreground">© 2025 Sanat Mansoor. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">{t('footer.copyright')}</p>
             <div className="flex items-center gap-6 text-sm">
               <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-                Company
+                {t('footer.company')}
               </a>
               <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                Support
+                {t('footer.support')}
               </a>
               <a href="/catalogs" className="text-muted-foreground hover:text-foreground transition-colors">
-                Catalogs
+                {t('nav.catalogs')}
               </a>
             </div>
           </div>
